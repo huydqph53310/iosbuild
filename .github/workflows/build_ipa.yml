@@ -1,0 +1,159 @@
+﻿name: Build iOS IPA
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  build:
+    name: Build & Package IPA
+    runs-on: macos-14
+
+    steps:
+      - name: Checkout Code with Git LFS
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Setup Xcode
+        run: |
+          sudo xcode-select -s /Applications/Xcode_16.0.app || sudo xcode-select -s /Applications/Xcode_16.1.app || sudo xcode-select -s /Applications/Xcode_16.2.app || sudo xcode-select -s /Applications/Xcode.app || sudo xcode-select -s /Applications/Xcode_15.4.app || true
+          xcodebuild -version
+
+      - name: Ensure Swift Standard Library & Dummy Swift
+        run: |
+          mkdir -p Libraries
+          if [ ! -f "Libraries/DummySwift.swift" ]; then
+            echo "// Swift runtime trigger" > Libraries/DummySwift.swift
+            echo "import Foundation" >> Libraries/DummySwift.swift
+          fi
+
+      - name: Setup CocoaPods
+        run: |
+          if [ -f "Podfile" ]; then
+            pod install --no-repo-update || pod install || true
+          fi
+
+      - name: Build with Xcode
+        run: |
+          if [ -d "Unity-iPhone.xcworkspace" ]; then
+            BUILD_CMD="xcodebuild clean build -workspace Unity-iPhone.xcworkspace -scheme Unity-iPhone"
+          else
+            BUILD_CMD="xcodebuild clean build -project Unity-iPhone.xcodeproj -scheme Unity-iPhone"
+          fi
+
+          $BUILD_CMD \
+            -configuration Release \
+            -destination 'generic/platform=iOS' \
+            -sdk iphoneos \
+            -derivedDataPath ./build \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            PROVISIONING_PROFILE_SPECIFIER="" \
+            COMPILER_INDEX_STORE_ENABLE=NO \
+            IPHONEOS_DEPLOYMENT_TARGET=15.0
+
+      - name: Package to IPA
+        run: |
+          APP_PATH=$(find ./build/Build/Products/Release-iphoneos -maxdepth 1 -name "*.app" -type d | head -n 1)
+          if [ -z "$APP_PATH" ]; then
+            APP_PATH=$(find ./build/Build/Products -name "*.app" -type d | grep -v "Intermediates" | head -n 1)
+          fi
+          if [ -z "$APP_PATH" ]; then
+            echo "Error: Cannot find compiled .app bundle!"
+            exit 1
+          fi
+          echo "Found compiled app at: $APP_PATH"
+
+          mkdir -p "$APP_PATH/Frameworks"
+
+          # 1. Embed UnityFramework.framework if present in Products and not already embedded
+          if [ ! -d "$APP_PATH/Frameworks/UnityFramework.framework" ]; then
+            FW_PATH=$(find ./build/Build/Products -name "UnityFramework.framework" -type d | grep -v "Intermediates" | head -n 1)
+            if [ -n "$FW_PATH" ]; then
+              echo "Embedding UnityFramework.framework into app/Frameworks..."
+              cp -a "$FW_PATH" "$APP_PATH/Frameworks/"
+            fi
+          fi
+
+          # 2. Embed Data directory into app bundle (CRITICAL: Contains globalgamemanagers, metadata, assets, scenes)
+          if [ -d "./Data" ]; then
+            echo "Copying Data directory into app bundle..."
+            rm -rf "$APP_PATH/Data"
+            cp -a "./Data" "$APP_PATH/Data"
+            if [ -d "$APP_PATH/Frameworks/UnityFramework.framework" ]; then
+              rm -rf "$APP_PATH/Frameworks/UnityFramework.framework/Data"
+              cp -a "./Data" "$APP_PATH/Frameworks/UnityFramework.framework/Data"
+            fi
+          fi
+
+          # 3. Inspect every framework in app/Frameworks: Remove static archives (ar archives)
+          # Static frameworks (like UnityAds or Pods) are already linked at compile time.
+          # If static frameworks are left inside Frameworks/, TrollStore's ldid will crash with 'Unknown header magic'.
+          for fw in "$APP_PATH"/Frameworks/*.framework; do
+            if [ -d "$fw" ]; then
+              fw_name=$(basename "$fw" .framework)
+              fw_bin="$fw/$fw_name"
+              if [ -f "$fw_bin" ]; then
+                bin_type=$(file -b "$fw_bin")
+                echo "Framework $fw_name binary type: $bin_type"
+                if [[ "$bin_type" == *"archive"* ]] || [[ "$bin_type" == *"current ar archive"* ]]; then
+                  echo "Removing static framework $fw_name from app/Frameworks (already statically linked)"
+                  rm -rf "$fw"
+                fi
+              fi
+            fi
+          done
+
+          # 4. Copy required Swift runtime dylibs if referenced by any binaries
+          xcrun swift-stdlib-tool --copy --platform iphoneos --destination "$APP_PATH/Frameworks" --scan-folder "$APP_PATH" 2>/dev/null || true
+
+          # 5. If Frameworks directory is empty, remove it to keep bundle clean
+          if [ -d "$APP_PATH/Frameworks" ] && [ -z "$(ls -A "$APP_PATH/Frameworks" 2>/dev/null)" ]; then
+            rm -rf "$APP_PATH/Frameworks"
+          fi
+
+          # 6. Clean metadata, extended attributes, and DS_Store
+          find "$APP_PATH" -name ".DS_Store" -delete 2>/dev/null || true
+          xattr -cr "$APP_PATH" 2>/dev/null || true
+
+          # 7. Convert and validate Info.plist format
+          plutil -convert xml1 "$APP_PATH/Info.plist" || true
+          /usr/libexec/PlistBuddy -c "Set :CFBundleExecutable MobiArmy3HA" "$APP_PATH/Info.plist" 2>/dev/null || true
+          /usr/libexec/PlistBuddy -c "Set :CFBundleIdentifier com.Mobiarmy3HA.puochuy222" "$APP_PATH/Info.plist" 2>/dev/null || true
+
+          # 8. Ensure execute permissions on app binaries and frameworks
+          chmod -R 755 "$APP_PATH"
+
+          echo "=== APP BUNDLE DIAGNOSTICS ==="
+          ls -la "$APP_PATH"
+          if [ -d "$APP_PATH/Frameworks" ]; then
+            echo "=== FRAMEWORKS DIAGNOSTICS ==="
+            ls -la "$APP_PATH/Frameworks"
+          fi
+          echo "=== EXECUTABLE INFO ==="
+          file "$APP_PATH/MobiArmy3HA" || true
+          otool -L "$APP_PATH/MobiArmy3HA" || true
+          if [ -f "$APP_PATH/Frameworks/UnityFramework.framework/UnityFramework" ]; then
+            echo "=== UNITYFRAMEWORK INFO ==="
+            file "$APP_PATH/Frameworks/UnityFramework.framework/UnityFramework" || true
+            otool -L "$APP_PATH/Frameworks/UnityFramework.framework/UnityFramework" || true
+          fi
+
+          # 9. Package into Payload
+          rm -rf Payload Army3.ipa
+          mkdir -p Payload
+          cp -a "$APP_PATH" Payload/
+          chmod -R 755 Payload
+          zip -r -y Army3.ipa Payload
+
+      - name: Upload IPA
+        uses: actions/upload-artifact@v4
+        with:
+          name: Army3-iOS-IPA
+          path: Army3.ipa
+          retention-days: 14
