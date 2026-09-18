@@ -1,0 +1,2 @@
+﻿Data/resources.assets filter=lfs diff=lfs merge=lfs -text
+Frameworks/UnityRuntime.framework/UnityRuntime filter=lfs diff=lfs merge=lfs -text

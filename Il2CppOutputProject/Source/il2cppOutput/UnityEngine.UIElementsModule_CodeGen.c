@@ -1,0 +1,235 @@
+﻿#include "pch-c.h"
+
+
+#include "codegen/il2cpp-codegen-metadata.h"
+
+
+
+
+
+extern void EmbeddedAttribute__ctor_mD39C25AACFC0ED080CB375155DEBCA852668B4DE (void);
+extern void IsUnmanagedAttribute__ctor_m3767B381F4FAA0A7335C78736EB078B506B7505F (void);
+extern void RefSafetyRulesAttribute__ctor_m66C7929899D1160F37F80348F15DE31E9693FBF8 (void);
+extern void KeyboardEventExtensions_ShouldSendNavigationMoveEventRuntime_mE115DCF9A83C6D801DEF4DCEEF402C78A2ED31C1 (void);
+extern void PointerType__cctor_mC0CE92C3808862FCF47294B692085540D250A028 (void);
+extern void PointerId__cctor_m3BB8C9F77AFE8746AC37B7E20F963C22BAC222D6 (void);
+extern void PanelInputState_get_current_m84D168B44775977C801CB4F0E1BB876C2204B2AB (void);
+extern void PanelInputSettings_get_Default_m489504E492EDFA286F7CF0F7906702ACE3636244 (void);
+extern void PanelInputSettings_get_processWorldSpaceInput_mFF7F8E3CBB777701F57FA4C28D92729E9A224347 (void);
+extern void PanelInputSettings_get_interactionLayers_m6A82DF737D92396E81980FA1937505AC6AF0D25E (void);
+extern void PanelInputSettings_get_maxInteractionDistance_m38D4CA84FD4CDB78B6C9E6C289D375D7F96066B3 (void);
+extern void PanelInputSettings_get_defaultEventCameraIsMainCamera_mDB95183F2EB6864022D8E23BBF35C6FFB4FCFB1D (void);
+extern void PanelInputSettings_get_eventCameras_m11C55A86720D76A53F2A130092CF6D76EFC0C472 (void);
+extern void PanelInputSettings_get_autoCreatePanelComponents_m72D7325B9E57366B28617F3FC42151959EFD2EE1 (void);
+extern void PanelInputSettings_get_shouldRedirectInput_m0B63F6074A80887627F7A439548389711101CD2D (void);
+extern void PanelInputSettings__cctor_m6AA86B324B1A49D3C0C982DF552CAEA4ED3764BB (void);
+extern void IRuntimePanel_get_uIElementsRuntimeUtility_m0F84F456439695E51404993CA7BBB2D15DE83A80 (void);
+extern void IRuntimePanel_get_pointerDeviceState_m83C7289F966DEE381F99F51766CEF7010A1E9A65 (void);
+extern void UIElementsRuntimeUtilityNative_UpdatePanels_m7AA4182BFC7A561A78A786FAAD18C71158EDFCBD (void);
+extern void UIElementsRuntimeUtilityNative_RepaintPanels_m6E1DBBEA92D119AAD97F13CA2C55364BA175D657 (void);
+extern void UIElementsRuntimeUtilityNative_RenderOffscreenPanels_m1AE4EC54EE606959689F06921FF38CD7948690C3 (void);
+extern void UIRUtility_Destroy_m9E925E79E7B4A4853B47C1EFACEF2ED0A7844A23 (void);
+extern void UIRUtility__cctor_m467B47359B3F52D1C3261BF6741239AD0CDDD348 (void);
+extern void Utility_RaiseGraphicsResourcesRecreate_mF33D7223297EC8AB4C3273397005E442BF6FAA11 (void);
+extern void Utility_RaiseEngineUpdate_m2D3D837B201E72568207882032626907E05F0327 (void);
+extern void Utility_RaiseFlushPendingResources_mA1138479367B74CFF601A3E7617C6861CCD814B2 (void);
+extern void Utility__cctor_m462F466B065A735D1D573736C7AC1D251C0271EE (void);
+extern void Shaders__cctor_m06282ACC2F5344B37C455BC5718897333DB77E3E (void);
+static Il2CppMethodPointer s_methodPointers[77] = 
+{
+	EmbeddedAttribute__ctor_mD39C25AACFC0ED080CB375155DEBCA852668B4DE,
+	IsUnmanagedAttribute__ctor_m3767B381F4FAA0A7335C78736EB078B506B7505F,
+	RefSafetyRulesAttribute__ctor_m66C7929899D1160F37F80348F15DE31E9693FBF8,
+	KeyboardEventExtensions_ShouldSendNavigationMoveEventRuntime_mE115DCF9A83C6D801DEF4DCEEF402C78A2ED31C1,
+	PointerType__cctor_mC0CE92C3808862FCF47294B692085540D250A028,
+	PointerId__cctor_m3BB8C9F77AFE8746AC37B7E20F963C22BAC222D6,
+	NULL,
+	PanelInputState_get_current_m84D168B44775977C801CB4F0E1BB876C2204B2AB,
+	PanelInputSettings_get_Default_m489504E492EDFA286F7CF0F7906702ACE3636244,
+	PanelInputSettings_get_processWorldSpaceInput_mFF7F8E3CBB777701F57FA4C28D92729E9A224347,
+	PanelInputSettings_get_interactionLayers_m6A82DF737D92396E81980FA1937505AC6AF0D25E,
+	PanelInputSettings_get_maxInteractionDistance_m38D4CA84FD4CDB78B6C9E6C289D375D7F96066B3,
+	PanelInputSettings_get_defaultEventCameraIsMainCamera_mDB95183F2EB6864022D8E23BBF35C6FFB4FCFB1D,
+	PanelInputSettings_get_eventCameras_m11C55A86720D76A53F2A130092CF6D76EFC0C472,
+	PanelInputSettings_get_autoCreatePanelComponents_m72D7325B9E57366B28617F3FC42151959EFD2EE1,
+	PanelInputSettings_get_shouldRedirectInput_m0B63F6074A80887627F7A439548389711101CD2D,
+	PanelInputSettings__cctor_m6AA86B324B1A49D3C0C982DF552CAEA4ED3764BB,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	IRuntimePanel_get_uIElementsRuntimeUtility_m0F84F456439695E51404993CA7BBB2D15DE83A80,
+	IRuntimePanel_get_pointerDeviceState_m83C7289F966DEE381F99F51766CEF7010A1E9A65,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	UIElementsRuntimeUtilityNative_UpdatePanels_m7AA4182BFC7A561A78A786FAAD18C71158EDFCBD,
+	UIElementsRuntimeUtilityNative_RepaintPanels_m6E1DBBEA92D119AAD97F13CA2C55364BA175D657,
+	UIElementsRuntimeUtilityNative_RenderOffscreenPanels_m1AE4EC54EE606959689F06921FF38CD7948690C3,
+	UIRUtility_Destroy_m9E925E79E7B4A4853B47C1EFACEF2ED0A7844A23,
+	UIRUtility__cctor_m467B47359B3F52D1C3261BF6741239AD0CDDD348,
+	Utility_RaiseGraphicsResourcesRecreate_mF33D7223297EC8AB4C3273397005E442BF6FAA11,
+	Utility_RaiseEngineUpdate_m2D3D837B201E72568207882032626907E05F0327,
+	Utility_RaiseFlushPendingResources_mA1138479367B74CFF601A3E7617C6861CCD814B2,
+	Utility__cctor_m462F466B065A735D1D573736C7AC1D251C0271EE,
+	Shaders__cctor_m06282ACC2F5344B37C455BC5718897333DB77E3E,
+};
+extern void PanelInputSettings_get_processWorldSpaceInput_mFF7F8E3CBB777701F57FA4C28D92729E9A224347_AdjustorThunk (void);
+extern void PanelInputSettings_get_interactionLayers_m6A82DF737D92396E81980FA1937505AC6AF0D25E_AdjustorThunk (void);
+extern void PanelInputSettings_get_maxInteractionDistance_m38D4CA84FD4CDB78B6C9E6C289D375D7F96066B3_AdjustorThunk (void);
+extern void PanelInputSettings_get_defaultEventCameraIsMainCamera_mDB95183F2EB6864022D8E23BBF35C6FFB4FCFB1D_AdjustorThunk (void);
+extern void PanelInputSettings_get_eventCameras_m11C55A86720D76A53F2A130092CF6D76EFC0C472_AdjustorThunk (void);
+extern void PanelInputSettings_get_autoCreatePanelComponents_m72D7325B9E57366B28617F3FC42151959EFD2EE1_AdjustorThunk (void);
+extern void PanelInputSettings_get_shouldRedirectInput_m0B63F6074A80887627F7A439548389711101CD2D_AdjustorThunk (void);
+static Il2CppTokenAdjustorThunkPair s_adjustorThunks[7] = 
+{
+	{ 0x0600000A, PanelInputSettings_get_processWorldSpaceInput_mFF7F8E3CBB777701F57FA4C28D92729E9A224347_AdjustorThunk },
+	{ 0x0600000B, PanelInputSettings_get_interactionLayers_m6A82DF737D92396E81980FA1937505AC6AF0D25E_AdjustorThunk },
+	{ 0x0600000C, PanelInputSettings_get_maxInteractionDistance_m38D4CA84FD4CDB78B6C9E6C289D375D7F96066B3_AdjustorThunk },
+	{ 0x0600000D, PanelInputSettings_get_defaultEventCameraIsMainCamera_mDB95183F2EB6864022D8E23BBF35C6FFB4FCFB1D_AdjustorThunk },
+	{ 0x0600000E, PanelInputSettings_get_eventCameras_m11C55A86720D76A53F2A130092CF6D76EFC0C472_AdjustorThunk },
+	{ 0x0600000F, PanelInputSettings_get_autoCreatePanelComponents_m72D7325B9E57366B28617F3FC42151959EFD2EE1_AdjustorThunk },
+	{ 0x06000010, PanelInputSettings_get_shouldRedirectInput_m0B63F6074A80887627F7A439548389711101CD2D_AdjustorThunk },
+};
+static const int32_t s_InvokerIndices[77] = 
+{
+	4050,
+	4050,
+	3199,
+	5974,
+	6438,
+	6438,
+	-1,
+	6372,
+	6399,
+	3866,
+	3932,
+	4008,
+	3866,
+	3855,
+	3866,
+	3866,
+	6438,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	6372,
+	6372,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	-1,
+	6438,
+	6331,
+	6438,
+	6330,
+	6438,
+	6331,
+	6438,
+	6438,
+	6438,
+	6438,
+};
+IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_UIElementsModule_CodeGenModule;
+const Il2CppCodeGenModule g_UnityEngine_UIElementsModule_CodeGenModule = 
+{
+	"UnityEngine.UIElementsModule.dll",
+	77,
+	s_methodPointers,
+	7,
+	s_adjustorThunks,
+	s_InvokerIndices,
+	0,
+	NULL,
+	0,
+	NULL,
+	0,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+	NULL,
+};

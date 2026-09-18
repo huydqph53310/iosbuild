@@ -1,0 +1,163 @@
+﻿name: Build iOS IPA
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+      - master
+
+jobs:
+  build:
+    name: Build & Package IPA
+    runs-on: macos-14
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout Code with Git LFS
+        uses: actions/checkout@v4
+        with:
+          lfs: true
+
+      - name: Ensure Git LFS Binaries Downloaded
+        run: |
+          git lfs install
+          git lfs pull || true
+          echo "=== Checking Data File Headers ==="
+          file Data/globalgamemanagers.assets || true
+          file Data/resources.assets || true
+
+      - name: Setup Xcode
+        run: |
+          sudo xcode-select -s /Applications/Xcode_16.0.app || sudo xcode-select -s /Applications/Xcode_16.1.app || sudo xcode-select -s /Applications/Xcode_16.2.app || sudo xcode-select -s /Applications/Xcode.app || sudo xcode-select -s /Applications/Xcode_15.4.app || true
+          xcodebuild -version
+
+      - name: Build with Xcode
+        run: |
+          set -o pipefail
+          xcodebuild clean build \
+            -project Unity-iPhone.xcodeproj \
+            -scheme Unity-iPhone \
+            -configuration Release \
+            -destination 'generic/platform=iOS' \
+            -sdk iphoneos \
+            -derivedDataPath ./build \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY="" \
+            PROVISIONING_PROFILE_SPECIFIER="" \
+            COMPILER_INDEX_STORE_ENABLE=NO \
+            IPHONEOS_DEPLOYMENT_TARGET=15.0 2>&1 | tee xcodebuild.log || {
+              echo "==================== BUILD FAILED: EXACT ERRORS ==================== "
+              grep -E -C 5 "(error:|fatal error:|Undefined symbol|clang: error|ld:)" xcodebuild.log || tail -n 200 xcodebuild.log
+              echo "==================== TAIL OF LOG ==================== "
+              tail -n 100 xcodebuild.log
+              exit 1
+            }
+
+      - name: Package to IPA
+        run: |
+          APP_PATH=$(find ./build/Build/Products/Release-iphoneos -maxdepth 1 -name "*.app" -type d | head -n 1)
+          if [ -z "$APP_PATH" ]; then
+            APP_PATH=$(find ./build/Build/Products -name "*.app" -type d | grep -v "Intermediates" | head -n 1)
+          fi
+          if [ -z "$APP_PATH" ]; then
+            echo "Error: Cannot find compiled .app bundle!"
+            exit 1
+          fi
+          echo "Found compiled app at: $APP_PATH"
+
+          mkdir -p "$APP_PATH/Frameworks"
+
+          # 1. Embed UnityFramework.framework if present in Products and not already embedded
+          if [ ! -d "$APP_PATH/Frameworks/UnityFramework.framework" ]; then
+            FW_PATH=$(find ./build/Build/Products -name "UnityFramework.framework" -type d | grep -v "Intermediates" | head -n 1)
+            if [ -n "$FW_PATH" ]; then
+              echo "Embedding UnityFramework.framework into app/Frameworks..."
+              cp -a "$FW_PATH" "$APP_PATH/Frameworks/"
+            fi
+          fi
+
+          # 2. Embed Data directory into app bundle and framework
+          if [ -d "./Data" ]; then
+            echo "Copying Data directory into app bundle..."
+            rm -rf "$APP_PATH/Data"
+            cp -a "./Data" "$APP_PATH/Data"
+            if [ -d "$APP_PATH/Frameworks/UnityFramework.framework" ]; then
+              rm -rf "$APP_PATH/Frameworks/UnityFramework.framework/Data"
+              cp -a "./Data" "$APP_PATH/Frameworks/UnityFramework.framework/Data"
+            fi
+          fi
+
+          # 3. Inspect every framework in app/Frameworks: Remove static archives
+          for fw in "$APP_PATH"/Frameworks/*.framework; do
+            if [ -d "$fw" ]; then
+              fw_name=$(basename "$fw" .framework)
+              fw_bin="$fw/$fw_name"
+              if [ -f "$fw_bin" ]; then
+                bin_type=$(file -b "$fw_bin")
+                echo "Framework $fw_name binary type: $bin_type"
+                if [[ "$bin_type" == *"archive"* ]] || [[ "$bin_type" == *"current ar archive"* ]]; then
+                  echo "Removing static framework $fw_name from app/Frameworks"
+                  rm -rf "$fw"
+                fi
+              fi
+            fi
+          done
+
+          # 4. Create IPA and ZIP for TrollStore / Sideload
+          rm -rf Payload Army3.ipa Army3.zip
+          mkdir Payload
+          cp -a "$APP_PATH" Payload/
+          zip -r -y -q Army3.ipa Payload
+          zip -q Army3.zip Army3.ipa
+          echo "Created Army3.ipa ($(ls -lh Army3.ipa | awk '{print $5}')) and Army3.zip ($(ls -lh Army3.zip | awk '{print $5}'))"
+
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: Army3-iOS-Package
+          path: |
+            Army3.ipa
+            Army3.zip
+          retention-days: 14
+
+      - name: Publish to GitHub Releases
+        if: startsWith(github.ref, 'refs/heads/')
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          echo "Publishing Army3.ipa and Army3.zip to GitHub Releases..."
+          gh release delete latest --yes 2>/dev/null || true
+          git tag -d latest 2>/dev/null || true
+          git push origin :refs/tags/latest 2>/dev/null || true
+          sleep 2
+
+          gh release create latest \
+            --title "MobiArmy3 iOS IPA (Latest)" \
+            --notes "Bản build iOS mới nhất cho MobiArmy3. Bạn có thể tải file Army3.ipa trực tiếp hoặc file Army3.zip giải nén."
+
+          sleep 3
+
+          upload_with_retry() {
+            local file="$1"
+            local max_attempts=5
+            local attempt=1
+            while [ $attempt -le $max_attempts ]; do
+              echo "Uploading $file (Attempt $attempt/$max_attempts)..."
+              if gh release upload latest "$file" --clobber; then
+                echo "Successfully uploaded $file"
+                return 0
+              fi
+              echo "Upload failed for $file. Waiting 5s before retry..."
+              sleep 5
+              attempt=$((attempt + 1))
+            done
+            echo "Warning: Failed to upload $file after $max_attempts attempts"
+            return 1
+          }
+
+          upload_with_retry "Army3.ipa" || true
+          sleep 2
+          upload_with_retry "Army3.zip" || true
