@@ -1682,9 +1682,17 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Font_GetOSFallbacks();
 		Register_UnityEngine_Font_GetOSFallbacks();
 
+		//System.Void UnityEngine.Font::Internal_CreateDynamicFont(UnityEngine.Font,System.String[],System.Int32)
+		void Register_UnityEngine_Font_Internal_CreateDynamicFont();
+		Register_UnityEngine_Font_Internal_CreateDynamicFont();
+
 		//System.Void UnityEngine.Font::Internal_CreateFont_Injected(UnityEngine.Font,UnityEngine.Bindings.ManagedSpanWrapper&)
 		void Register_UnityEngine_Font_Internal_CreateFont_Injected();
 		Register_UnityEngine_Font_Internal_CreateFont_Injected();
+
+		//System.Void UnityEngine.Font::set_fontNames_Injected(System.IntPtr,System.String[])
+		void Register_UnityEngine_Font_set_fontNames_Injected();
+		Register_UnityEngine_Font_set_fontNames_Injected();
 
 	//End Registrations for type : UnityEngine.Font
 
@@ -2233,10 +2241,6 @@ void RegisterAllStrippedInternalCalls()
 		//System.Boolean UnityEngine.Input::GetTouchSupportedInternal()
 		void Register_UnityEngine_Input_GetTouchSupportedInternal();
 		Register_UnityEngine_Input_GetTouchSupportedInternal();
-
-		//System.Boolean UnityEngine.Input::get_anyKeyDown()
-		void Register_UnityEngine_Input_get_anyKeyDown();
-		Register_UnityEngine_Input_get_anyKeyDown();
 
 		//System.Int32 UnityEngine.Input::get_touchCount()
 		void Register_UnityEngine_Input_get_touchCount();

@@ -1,4 +1,4 @@
-#import <UIKit/UIKit.h>
+﻿#import <UIKit/UIKit.h>
 #import <UnityFramework/UnityFramework.h>
 #import <signal.h>
 #import <execinfo.h>
@@ -10,7 +10,8 @@ static void LogToDoc(NSString* str)
     if (paths && [paths count] > 0)
     {
         NSString* logPath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"startup_log.txt"];
-        NSData* data = [[str stringByAppendingString:@"\n"] dataUsingEncoding:NSUTF8StringEncoding];
+        NSData* data = [[str stringByAppendingString:@"
+"] dataUsingEncoding:NSUTF8StringEncoding];
         NSFileHandle* handle = [NSFileHandle fileHandleForWritingAtPath:logPath];
         if (!handle)
         {
@@ -30,12 +31,15 @@ static void GlobalSignalHandler(int sig)
     void* callstack[64];
     int frames = backtrace(callstack, 64);
     char** strs = backtrace_symbols(callstack, frames);
-    NSMutableString* trace = [NSMutableString stringWithFormat:@"[CRASH] Signal %d received!\nCall stack:\n", sig];
+    NSMutableString* trace = [NSMutableString stringWithFormat:@"[CRASH] Signal %d received!
+Call stack:
+", sig];
     if (strs)
     {
         for (int i = 0; i < frames; ++i)
         {
-            [trace appendFormat:@"%s\n", strs[i]];
+            [trace appendFormat:@"%s
+", strs[i]];
         }
         free(strs);
     }
@@ -45,8 +49,11 @@ static void GlobalSignalHandler(int sig)
 
 static void GlobalExceptionHandler(NSException* exception)
 {
-    NSString* err = [NSString stringWithFormat:@"[EXCEPTION] %@: %@\nStack:\n%@",
-                     exception.name, exception.reason, [exception.callStackSymbols componentsJoinedByString:@"\n"]];
+    NSString* err = [NSString stringWithFormat:@"[EXCEPTION] %@: %@
+Stack:
+%@",
+                     exception.name, exception.reason, [exception.callStackSymbols componentsJoinedByString:@"
+"]];
     LogToDoc(err);
 }
 
