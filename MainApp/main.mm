@@ -9,6 +9,7 @@ static void LogToDoc(NSString* str)
     NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     if (paths && [paths count] > 0)
     {
+        NSString* logPath = [[paths objectAtIndex:0] stringByAppendingPathComponent:@"startup_log.txt"];
         NSData* data = [[str stringByAppendingString:@"\n"] dataUsingEncoding:NSUTF8StringEncoding];
         NSFileHandle* handle = [NSFileHandle fileHandleForWritingAtPath:logPath];
         if (!handle)
