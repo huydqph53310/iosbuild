@@ -59,24 +59,24 @@ static void GlobalExceptionHandler(NSException* exception)
 {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor blackColor];
-    
+
     UIViewController* vc = [[UIViewController alloc] init];
     vc.view.backgroundColor = [UIColor colorWithRed:0.08f green:0.08f blue:0.12f alpha:1.0f];
-    
+
     UILabel* titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(20, 50, vc.view.bounds.size.width - 40, 40)];
     titleLabel.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleBottomMargin;
     titleLabel.text = @"MobiArmy3 - Loading Error";
     titleLabel.textColor = [UIColor redColor];
     titleLabel.font = [UIFont boldSystemFontOfSize:18];
     [vc.view addSubview:titleLabel];
-    
+
     UITextView* textView = [[UITextView alloc] initWithFrame:CGRectMake(15, 100, vc.view.bounds.size.width - 30, vc.view.bounds.size.height - 120)];
     textView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
     textView.backgroundColor = [UIColor colorWithRed:0.12f green:0.12f blue:0.16f alpha:1.0f];
     textView.textColor = [UIColor whiteColor];
     textView.font = [UIFont systemFontOfSize:12];
     textView.editable = NO;
-    
+
     NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     if (paths && [paths count] > 0)
     {
@@ -88,7 +88,7 @@ static void GlobalExceptionHandler(NSException* exception)
         textView.text = @"UnityFramework failed to load on this device.";
     }
     [vc.view addSubview:textView];
-    
+
     self.window.rootViewController = vc;
     [self.window makeKeyAndVisible];
     return YES;
@@ -129,7 +129,7 @@ UnityFramework* UnityFrameworkLoad()
     {
         ufw = [(id)principalClass getInstance];
     }
-    
+
     if (ufw != nil)
     {
         NSString* mainBundleId = [[NSBundle mainBundle] bundleIdentifier];

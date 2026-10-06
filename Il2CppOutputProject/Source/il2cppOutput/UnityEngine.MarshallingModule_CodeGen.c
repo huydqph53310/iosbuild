@@ -85,7 +85,7 @@ static const int32_t s_InvokerIndices[20] =
 {
 	4056,
 	3202,
-	5435,
+	5442,
 	3135,
 	3135,
 	3135,
@@ -100,9 +100,9 @@ static const int32_t s_InvokerIndices[20] =
 	3145,
 	3145,
 	3145,
+	5796,
+	6349,
 	5789,
-	6342,
-	5782,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_MarshallingModule_CodeGenModule;
 const Il2CppCodeGenModule g_UnityEngine_MarshallingModule_CodeGenModule = 

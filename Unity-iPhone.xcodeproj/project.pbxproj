@@ -412,6 +412,7 @@
 		3BA0990F0FC7F8ECF11899BA /* UnityEngine.InputForUIModule_CodeGen.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; name = UnityEngine.InputForUIModule_CodeGen.c; path = Il2CppOutputProject/Source/il2cppOutput/UnityEngine.InputForUIModule_CodeGen.c; sourceTree = SOURCE_ROOT; };
 		3BF0F548641EA67234EF4822 /* Assembly-CSharp__3.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Assembly-CSharp__3.cpp"; path = "Il2CppOutputProject/Source/il2cppOutput/Assembly-CSharp__3.cpp"; sourceTree = SOURCE_ROOT; };
 		3C1439DA92288F74DB18D0AF /* main.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; name = main.mm; path = Classes/main.mm; sourceTree = SOURCE_ROOT; };
+		3C54469E02AE026A630B4244 /* Assembly-CSharp__25.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Assembly-CSharp__25.cpp"; path = "Il2CppOutputProject/Source/il2cppOutput/Assembly-CSharp__25.cpp"; sourceTree = SOURCE_ROOT; };
 		3E6AB690991E5D5C419B99F5 /* Newtonsoft.Json__2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Newtonsoft.Json__2.cpp; path = Il2CppOutputProject/Source/il2cppOutput/Newtonsoft.Json__2.cpp; sourceTree = SOURCE_ROOT; };
 		3F0DEDAD22D43F6FA7C4B149 /* TransactionObserverUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = TransactionObserverUseCase.swift; path = Libraries/com.unity.purchasing/Plugins/UnityPurchasing/iOS/SK2/UseCases/TransactionObserverUseCase.swift; sourceTree = SOURCE_ROOT; };
 		4114445645D738D6E9CC35B8 /* Assembly-CSharp__17.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = "Assembly-CSharp__17.cpp"; path = "Il2CppOutputProject/Source/il2cppOutput/Assembly-CSharp__17.cpp"; sourceTree = SOURCE_ROOT; };
@@ -1122,6 +1123,7 @@
 				C1D2C2900B1B1033C50FDC84 /* Assembly-CSharp__22.cpp */,
 				223EBC6A186ED13AA8BAEDBA /* Assembly-CSharp__23.cpp */,
 				0A99F41A6E79CC9C6BE2D738 /* Assembly-CSharp__24.cpp */,
+				3C54469E02AE026A630B4244 /* Assembly-CSharp__25.cpp */,
 				3BF0F548641EA67234EF4822 /* Assembly-CSharp__3.cpp */,
 				4F97D266790DB44CD01959EC /* Assembly-CSharp__4.cpp */,
 				A34734E12320BFE93D77614B /* Assembly-CSharp__5.cpp */,
@@ -2375,7 +2377,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PRODUCT_NAME_APP = MobiArmy3HA;
+				PRODUCT_NAME_APP = Mobiarmy3HA;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -2512,7 +2514,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PRODUCT_NAME_APP = MobiArmy3HA;
+				PRODUCT_NAME_APP = Mobiarmy3HA;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -3112,7 +3114,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_NAME_APP = MobiArmy3HA;
+				PRODUCT_NAME_APP = Mobiarmy3HA;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 				SWIFT_VERSION = 5.0;
@@ -3153,7 +3155,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				PRODUCT_NAME_APP = MobiArmy3HA;
+				PRODUCT_NAME_APP = Mobiarmy3HA;
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = iphoneos;
 				SWIFT_VERSION = 5.0;
