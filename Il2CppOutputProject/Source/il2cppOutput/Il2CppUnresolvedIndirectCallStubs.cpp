@@ -3717,7 +3717,7 @@ struct unitytls_protocol_t08A2DE5BF736B214E28F8D60B84B2648DE327FD7
 {
 	uint32_t ___value__;
 };
-struct lIIlllIIlIIllIlllllIlIIIlIIIlIIIIIIlIIlIIlIllIlIlIlIIIlllIIlIlIlIlIlIIlI_tC48E734FD8C000C49B51FECE97DC5F30A8562C6B 
+struct lIIllIllIIIIIllIllIlIlIlllIIllIlIIIlIlIIIllIlllIllIlIIIlIlIIIIIllllIIIIl_t5640B6672F7B2E590F0B63B27F890D95B8F57677 
 {
 	int32_t ___value__;
 };
@@ -5332,23 +5332,23 @@ struct AssetEntry_tEB6FC90E5BB63DCA4FF932F2D64595339A28806D_marshaled_com
 	EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___m_EntityId;
 	Type_t* ___m_CachedType;
 };
-struct lIIlIIlllIIlIllIIllIlIIlIIlllllllIIIllIIIlllllIllIIIIIlIIIIlIIlIIIlllIlI_t0192B659CA7D3E6B3F4EC1EF3828304B5F9CA437 
+struct llIllIlllllIIIllIllllIIIIlIIlIIlIlllIlIIlIlllllllIIIlIIIIIIIIllIlIIIIIIl_t5A074B6B72C6BA52B40F8123882939C8436DAEF4 
 {
-	bool ___lIIlIlIlIIIllIllllllIIIlIlIIlIIIlIllllIIIlIlIIlIllIIllIIllIIIllIllIIIIII;
-	int32_t ___llllIIllllIlIlIllIlllIllIlllIIIIIIIIIlIlIIIlIllIlIIIIIIllllllIIlIlIlllIl;
-	String_t* ___llIllIIlIIIIIlIIIIIllIIIIlIIllIlllIIIIIIIlIlIlllIlIlIIllIllIlIllllIIlllI;
+	bool ___lIIllllllIlIIlIllIlIIIIIlIIIlIIIlIlllIlllIlIIlIIIIIIlIIIIlIIIIIIlIIIIIIl;
+	int32_t ___lIlIllIllllllIIlIllllllIIIIIIIIIllIllllIIIllllIIlllllllllIlIlllIlIlllIll;
+	String_t* ___llIllIllIlIlIIIlIllIIlIlIIIIIIIlIIIlIIIllIIIIlIlIllIIIIlIIIIIllIlllIIIIl;
 };
-struct lIIlIIlllIIlIllIIllIlIIlIIlllllllIIIllIIIlllllIllIIIIIlIIIIlIIlIIIlllIlI_t0192B659CA7D3E6B3F4EC1EF3828304B5F9CA437_marshaled_pinvoke
+struct llIllIlllllIIIllIllllIIIIlIIlIIlIlllIlIIlIlllllllIIIlIIIIIIIIllIlIIIIIIl_t5A074B6B72C6BA52B40F8123882939C8436DAEF4_marshaled_pinvoke
 {
-	int32_t ___lIIlIlIlIIIllIllllllIIIlIlIIlIIIlIllllIIIlIlIIlIllIIllIIllIIIllIllIIIIII;
-	int32_t ___llllIIllllIlIlIllIlllIllIlllIIIIIIIIIlIlIIIlIllIlIIIIIIllllllIIlIlIlllIl;
-	char* ___llIllIIlIIIIIlIIIIIllIIIIlIIllIlllIIIIIIIlIlIlllIlIlIIllIllIlIllllIIlllI;
+	int32_t ___lIIllllllIlIIlIllIlIIIIIlIIIlIIIlIlllIlllIlIIlIIIIIIlIIIIlIIIIIIlIIIIIIl;
+	int32_t ___lIlIllIllllllIIlIllllllIIIIIIIIIllIllllIIIllllIIlllllllllIlIlllIlIlllIll;
+	char* ___llIllIllIlIlIIIlIllIIlIlIIIIIIIlIIIlIIIllIIIIlIlIllIIIIlIIIIIllIlllIIIIl;
 };
-struct lIIlIIlllIIlIllIIllIlIIlIIlllllllIIIllIIIlllllIllIIIIIlIIIIlIIlIIIlllIlI_t0192B659CA7D3E6B3F4EC1EF3828304B5F9CA437_marshaled_com
+struct llIllIlllllIIIllIllllIIIIlIIlIIlIlllIlIIlIlllllllIIIlIIIIIIIIllIlIIIIIIl_t5A074B6B72C6BA52B40F8123882939C8436DAEF4_marshaled_com
 {
-	int32_t ___lIIlIlIlIIIllIllllllIIIlIlIIlIIIlIllllIIIlIlIIlIllIIllIIllIIIllIllIIIIII;
-	int32_t ___llllIIllllIlIlIllIlllIllIlllIIIIIIIIIlIlIIIlIllIlIIIIIIllllllIIlIlIlllIl;
-	Il2CppChar* ___llIllIIlIIIIIlIIIIIllIIIIlIIllIlllIIIIIIIlIlIlllIlIlIIllIllIlIllllIIlllI;
+	int32_t ___lIIllllllIlIIlIllIlIIIIIlIIIlIIIlIlllIlllIlIIlIIIIIIlIIIIlIIIIIIlIIIIIIl;
+	int32_t ___lIlIllIllllllIIlIllllllIIIIIIIIIllIllllIIIllllIIlllllllllIlIlllIlIlllIll;
+	Il2CppChar* ___llIllIllIlIlIIIlIllIIlIlIIIIIIIlIIIlIIIllIIIIlIlIllIIIIlIIIIIllIlllIIIIl;
 };
 struct EntryProcessingInfo_tE4803801829E2739380552B9DE313B056A9C9289 
 {
@@ -26781,7 +26781,7 @@ static  void UnresolvedStaticCall_2326 (void* p1, XmlSchemaObjectEntry_t79D1310E
 	void* args[] = {p1,&p2};
 	method->invoker_method(il2cpp_codegen_get_direct_method_pointer(method), method, NULL, args, NULL);
 }
-static  void UnresolvedStaticCall_2327 (void* p1, lIIlIIlllIIlIllIIllIlIIlIIlllllllIIIllIIIlllllIllIIIIIlIIIIlIIlIIIlllIlI_t0192B659CA7D3E6B3F4EC1EF3828304B5F9CA437 p2, const RuntimeMethod* method)
+static  void UnresolvedStaticCall_2327 (void* p1, llIllIlllllIIIllIllllIIIIlIIlIIlIlllIlIIlIlllllllIIIlIIIIIIIIllIlIIIIIIl_t5A074B6B72C6BA52B40F8123882939C8436DAEF4 p2, const RuntimeMethod* method)
 {
 	void* args[] = {p1,&p2};
 	method->invoker_method(il2cpp_codegen_get_direct_method_pointer(method), method, NULL, args, NULL);
@@ -28821,12 +28821,12 @@ static  void UnresolvedStaticCall_2574 (XmlSchemaObjectEntry_t79D1310E1F5CA860FA
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_direct_method_pointer(method), method, NULL, args, NULL);
 }
-static  void UnresolvedVirtualCall_2575 (RuntimeObject* __this, lIIlIIlllIIlIllIIllIlIIlIIlllllllIIIllIIIlllllIllIIIIIlIIIIlIIlIIIlllIlI_t0192B659CA7D3E6B3F4EC1EF3828304B5F9CA437 p1, const RuntimeMethod* method)
+static  void UnresolvedVirtualCall_2575 (RuntimeObject* __this, llIllIlllllIIIllIllllIIIIlIIlIIlIlllIlIIlIlllllllIIIlIIIIIIIIllIlIIIIIIl_t5A074B6B72C6BA52B40F8123882939C8436DAEF4 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_method_pointer(method), method, __this, args, NULL);
 }
-static  void UnresolvedStaticCall_2575 (lIIlIIlllIIlIllIIllIlIIlIIlllllllIIIllIIIlllllIllIIIIIlIIIIlIIlIIIlllIlI_t0192B659CA7D3E6B3F4EC1EF3828304B5F9CA437 p1, const RuntimeMethod* method)
+static  void UnresolvedStaticCall_2575 (llIllIlllllIIIllIllllIIIIlIIlIIlIlllIlIIlIlllllllIIIlIIIIIIIIllIlIIIIIIl_t5A074B6B72C6BA52B40F8123882939C8436DAEF4 p1, const RuntimeMethod* method)
 {
 	void* args[] = {&p1};
 	method->invoker_method(il2cpp_codegen_get_direct_method_pointer(method), method, NULL, args, NULL);
