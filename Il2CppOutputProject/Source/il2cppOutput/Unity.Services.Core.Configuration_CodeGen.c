@@ -28,15 +28,24 @@ extern void ExternalUserId_get_UserId_m1268EF581536451C575FFE42AB7A5FA8C41854AE 
 extern void ExternalUserId_add_UserIdChanged_mDC960AA45420844A9419398970EB546AD8D150D8 (void);
 extern void ExternalUserId_remove_UserIdChanged_m18B647E61958C72EEEBE176878AE27E3DB373C29 (void);
 extern void ExternalUserId__ctor_m100FCF5DA7EFE0D30CE2A9663F0D73510421C555 (void);
+extern void ProjectConfiguration_get_Serializer_mBD9BB251C31E7DB5392E300FFC447154BCCF3265 (void);
 extern void ProjectConfiguration__ctor_mDC6F397719C5A4E1BACA708F4C5F885957140B83 (void);
+extern void ProjectConfiguration_GetBool_m51112BD46FB55C94F84AA22134C6ED61198EB84A (void);
+extern void ProjectConfiguration_GetInt_mBD29323C27EC1451D01755B0065FCCBE4FC34E88 (void);
+extern void ProjectConfiguration_GetFloat_m763DBCCF811387657CAB52FF3E0114C04B52AFFF (void);
 extern void ProjectConfiguration_GetString_m214B5FAD0ADC6D5110B72CE4FBD13E44D9813F7D (void);
+extern void ProjectConfiguration_ToJson_mC2BF8223376DA40872BDEDDD1CD7EE60E34DC918 (void);
+extern void U3CU3Ec__cctor_mEC4335E15D926AC84739C2302812FD7C41B89399 (void);
+extern void U3CU3Ec__ctor_mD0E2BD6F748611140704512CCAF1670044C15F83 (void);
+extern void U3CU3Ec_U3CToJsonU3Eb__10_0_m06DDCA6CE5DECA15483E4A37F794C11C6BAAE904 (void);
+extern void U3CU3Ec_U3CToJsonU3Eb__10_1_mC63D16576EA803D011161A5A17FE15E7BFFDC141 (void);
 extern void SerializableProjectConfiguration_get_Empty_m12BD1FCCEBF166B16137D60C5EB6C5CF9E74FF04 (void);
 extern void StreamingAssetsConfigurationLoader__ctor_m7BAC58A597B47791AFDFC910BAE173CC594A997D (void);
 extern void StreamingAssetsConfigurationLoader_GetConfigAsync_m4670747CC5108D64D96AFC3A7A4C48F47C86B11F (void);
 extern void U3CGetConfigAsyncU3Ed__2_MoveNext_m9E58D12C49A5A91D6977494C811C89A2CF85522D (void);
 extern void U3CGetConfigAsyncU3Ed__2_SetStateMachine_m97223D4789B45241E85C9AA48042B683730089B7 (void);
 extern void StreamingAssetsUtils_GetFileTextFromStreamingAssetsAsync_m9E49560DF4218CAED97B714AC3EF6691A2288C28 (void);
-static Il2CppMethodPointer s_methodPointers[30] = 
+static Il2CppMethodPointer s_methodPointers[39] = 
 {
 	CloudProjectId_GetCloudProjectId_m869FB68DB9939F1F1DAA6AFCE8935CDC6EE755D6,
 	CloudProjectId__ctor_m04C6207EF478495335469EA975A65E82B79BACF7,
@@ -60,8 +69,17 @@ static Il2CppMethodPointer s_methodPointers[30] =
 	ExternalUserId_remove_UserIdChanged_m18B647E61958C72EEEBE176878AE27E3DB373C29,
 	ExternalUserId__ctor_m100FCF5DA7EFE0D30CE2A9663F0D73510421C555,
 	NULL,
+	ProjectConfiguration_get_Serializer_mBD9BB251C31E7DB5392E300FFC447154BCCF3265,
 	ProjectConfiguration__ctor_mDC6F397719C5A4E1BACA708F4C5F885957140B83,
+	ProjectConfiguration_GetBool_m51112BD46FB55C94F84AA22134C6ED61198EB84A,
+	ProjectConfiguration_GetInt_mBD29323C27EC1451D01755B0065FCCBE4FC34E88,
+	ProjectConfiguration_GetFloat_m763DBCCF811387657CAB52FF3E0114C04B52AFFF,
 	ProjectConfiguration_GetString_m214B5FAD0ADC6D5110B72CE4FBD13E44D9813F7D,
+	ProjectConfiguration_ToJson_mC2BF8223376DA40872BDEDDD1CD7EE60E34DC918,
+	U3CU3Ec__cctor_mEC4335E15D926AC84739C2302812FD7C41B89399,
+	U3CU3Ec__ctor_mD0E2BD6F748611140704512CCAF1670044C15F83,
+	U3CU3Ec_U3CToJsonU3Eb__10_0_m06DDCA6CE5DECA15483E4A37F794C11C6BAAE904,
+	U3CU3Ec_U3CToJsonU3Eb__10_1_mC63D16576EA803D011161A5A17FE15E7BFFDC141,
 	SerializableProjectConfiguration_get_Empty_m12BD1FCCEBF166B16137D60C5EB6C5CF9E74FF04,
 	StreamingAssetsConfigurationLoader__ctor_m7BAC58A597B47791AFDFC910BAE173CC594A997D,
 	StreamingAssetsConfigurationLoader_GetConfigAsync_m4670747CC5108D64D96AFC3A7A4C48F47C86B11F,
@@ -73,47 +91,56 @@ extern void U3CGetConfigAsyncU3Ed__2_MoveNext_m9E58D12C49A5A91D6977494C811C89A2C
 extern void U3CGetConfigAsyncU3Ed__2_SetStateMachine_m97223D4789B45241E85C9AA48042B683730089B7_AdjustorThunk (void);
 static Il2CppTokenAdjustorThunkPair s_adjustorThunks[2] = 
 {
-	{ 0x0600001C, U3CGetConfigAsyncU3Ed__2_MoveNext_m9E58D12C49A5A91D6977494C811C89A2CF85522D_AdjustorThunk },
-	{ 0x0600001D, U3CGetConfigAsyncU3Ed__2_SetStateMachine_m97223D4789B45241E85C9AA48042B683730089B7_AdjustorThunk },
+	{ 0x06000025, U3CGetConfigAsyncU3Ed__2_MoveNext_m9E58D12C49A5A91D6977494C811C89A2CF85522D_AdjustorThunk },
+	{ 0x06000026, U3CGetConfigAsyncU3Ed__2_SetStateMachine_m97223D4789B45241E85C9AA48042B683730089B7_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[30] = 
+static const int32_t s_InvokerIndices[39] = 
 {
-	3861,
-	4056,
-	5766,
-	5751,
-	5250,
-	3861,
-	3872,
-	4056,
-	1473,
-	2180,
-	5934,
-	5934,
-	6449,
-	6383,
-	6341,
-	6449,
-	6449,
-	3861,
-	3135,
-	3135,
-	4056,
+	7080,
+	7405,
+	9698,
+	9676,
+	9005,
+	7080,
+	7104,
+	7405,
+	2609,
+	3948,
+	9902,
+	9902,
+	10694,
+	10570,
+	10452,
+	10694,
+	10694,
+	7080,
+	5672,
+	5672,
+	7405,
 	-1,
-	1471,
-	1124,
-	6437,
-	3135,
-	3861,
-	4056,
-	3135,
-	5934,
+	7080,
+	2597,
+	1949,
+	2274,
+	2527,
+	1842,
+	7080,
+	10694,
+	7405,
+	3631,
+	3631,
+	10649,
+	5672,
+	7080,
+	7405,
+	5672,
+	9902,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_Services_Core_Configuration_CodeGenModule;
 const Il2CppCodeGenModule g_Unity_Services_Core_Configuration_CodeGenModule = 
 {
 	"Unity.Services.Core.Configuration.dll",
-	30,
+	39,
 	s_methodPointers,
 	2,
 	s_adjustorThunks,

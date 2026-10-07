@@ -7348,7 +7348,7 @@ IL_0185:
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_36 = __this->___data;
 		NullCheck(L_35);
 		int32_t L_37;
-		L_37 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(32, L_35, L_36, 0, ((int32_t)4096));
+		L_37 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33, L_35, L_36, 0, ((int32_t)4096));
 		__this->___end = L_37;
 		__this->___pos = 0;
 		__this->___sniffed = (bool)0;
@@ -10015,7 +10015,7 @@ IL_0112:
 		int32_t L_59 = V_4;
 		NullCheck(L_56);
 		int32_t L_60;
-		L_60 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(32, L_56, L_57, L_58, L_59);
+		L_60 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33, L_56, L_57, L_58, L_59);
 		V_5 = L_60;
 		int32_t L_61 = V_3;
 		int32_t L_62 = V_5;

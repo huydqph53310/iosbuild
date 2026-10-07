@@ -46,17 +46,23 @@ extern void CorePackageInitializer_InitializeMetrics_mC2CF2D07F30AEF02DB6559E2CE
 extern void CorePackageInitializer_InitializeDiagnostics_m6DB6C3486D9F3A6BA5CB8C77D77200A100A0C6CF (void);
 extern void CorePackageInitializer_InitializeCloudProjectId_m2C5E9D8C0F3A2EB517E733051869C85C5E57FF16 (void);
 extern void CorePackageInitializer_InitializeUnityThreadUtils_mD36274CF1EE6277E04427EAC0EBC9F939FDAFAA1 (void);
+extern void CorePackageInitializer_CreateDiagnosticsComponents_m1728E0479D4889EC9C8C794212CDA4114B607AE3 (void);
+extern void CorePackageInitializer_GetSerializedProjectConfigurationAsync_m48612B48513EF6B422D57FA991BA76CDAD9F0797 (void);
 extern void CorePackageInitializer_U3CInitializeComponentsU3Eg__RegisterProvidedComponentsU7C50_0_m2B50812AFF9AAA8613057BD4D024C7C44BDF49A7 (void);
 extern void CorePackageInitializer_U3CInitializeComponentsU3Eg__SendFailedInitDiagnosticU7C50_1_m4237D181688690DA881BBD057CF3DA6D0A6DDFFC (void);
+extern void U3CCreateDiagnosticsComponentsU3Ed__64_MoveNext_m9D74F3BC99F185517AC81A8859B7BCAE4AB91569 (void);
+extern void U3CCreateDiagnosticsComponentsU3Ed__64_SetStateMachine_mABE4FFD6D4BD134168DCFFA4CC238F20821EF867 (void);
 extern void U3CGenerateProjectConfigurationAsyncU3Ed__56_MoveNext_m9EE8776DA935BC2D7ACE71EF55F5A87FC015C7AD (void);
 extern void U3CGenerateProjectConfigurationAsyncU3Ed__56_SetStateMachine_mE67BE1C4F66E372FC0958636F492ED07ED591AAA (void);
 extern void U3CGetSerializedConfigOrEmptyAsyncU3Ed__57_MoveNext_m459F2568CD4B9F5ECEA9B367AE7C8E48DFFE547F (void);
 extern void U3CGetSerializedConfigOrEmptyAsyncU3Ed__57_SetStateMachine_m3365ABE2522FE2D2895CF78DB19EBEEFEA54AC26 (void);
+extern void U3CGetSerializedProjectConfigurationAsyncU3Ed__66_MoveNext_mE10221C7CB1CCFB597C1ED45016C76B0C96C4E8A (void);
+extern void U3CGetSerializedProjectConfigurationAsyncU3Ed__66_SetStateMachine_m1021F02A43B6558F4A3FD254C9DCCDC8AE44FC10 (void);
 extern void U3CInitializeComponentsU3Ed__50_MoveNext_mA22A5F8237DBBDF9B5855B702A3DF596910DF9AA (void);
 extern void U3CInitializeComponentsU3Ed__50_SetStateMachine_mB229F5934DE0A2A91D058BC83924D27F494B002A (void);
 extern void U3CInitializeProjectConfigAsyncU3Ed__55_MoveNext_mBDBFBCA4B6C6E3DFACEED82565499257A1160C8B (void);
 extern void U3CInitializeProjectConfigAsyncU3Ed__55_SetStateMachine_m659B85FF4B20C038298A4C252900DBE33495AC51 (void);
-static Il2CppMethodPointer s_methodPointers[49] = 
+static Il2CppMethodPointer s_methodPointers[55] = 
 {
 	CorePackageInitializer_get_ActionScheduler_m4AA2DE80197DFEB1DD2888501AE7CFC0B143E23D,
 	CorePackageInitializer_set_ActionScheduler_m9F7E74B1C5907D5D9F469B81303860D842FDA91E,
@@ -97,95 +103,115 @@ static Il2CppMethodPointer s_methodPointers[49] =
 	CorePackageInitializer_InitializeDiagnostics_m6DB6C3486D9F3A6BA5CB8C77D77200A100A0C6CF,
 	CorePackageInitializer_InitializeCloudProjectId_m2C5E9D8C0F3A2EB517E733051869C85C5E57FF16,
 	CorePackageInitializer_InitializeUnityThreadUtils_mD36274CF1EE6277E04427EAC0EBC9F939FDAFAA1,
+	CorePackageInitializer_CreateDiagnosticsComponents_m1728E0479D4889EC9C8C794212CDA4114B607AE3,
+	CorePackageInitializer_GetSerializedProjectConfigurationAsync_m48612B48513EF6B422D57FA991BA76CDAD9F0797,
 	CorePackageInitializer_U3CInitializeComponentsU3Eg__RegisterProvidedComponentsU7C50_0_m2B50812AFF9AAA8613057BD4D024C7C44BDF49A7,
 	CorePackageInitializer_U3CInitializeComponentsU3Eg__SendFailedInitDiagnosticU7C50_1_m4237D181688690DA881BBD057CF3DA6D0A6DDFFC,
+	U3CCreateDiagnosticsComponentsU3Ed__64_MoveNext_m9D74F3BC99F185517AC81A8859B7BCAE4AB91569,
+	U3CCreateDiagnosticsComponentsU3Ed__64_SetStateMachine_mABE4FFD6D4BD134168DCFFA4CC238F20821EF867,
 	U3CGenerateProjectConfigurationAsyncU3Ed__56_MoveNext_m9EE8776DA935BC2D7ACE71EF55F5A87FC015C7AD,
 	U3CGenerateProjectConfigurationAsyncU3Ed__56_SetStateMachine_mE67BE1C4F66E372FC0958636F492ED07ED591AAA,
 	U3CGetSerializedConfigOrEmptyAsyncU3Ed__57_MoveNext_m459F2568CD4B9F5ECEA9B367AE7C8E48DFFE547F,
 	U3CGetSerializedConfigOrEmptyAsyncU3Ed__57_SetStateMachine_m3365ABE2522FE2D2895CF78DB19EBEEFEA54AC26,
+	U3CGetSerializedProjectConfigurationAsyncU3Ed__66_MoveNext_mE10221C7CB1CCFB597C1ED45016C76B0C96C4E8A,
+	U3CGetSerializedProjectConfigurationAsyncU3Ed__66_SetStateMachine_m1021F02A43B6558F4A3FD254C9DCCDC8AE44FC10,
 	U3CInitializeComponentsU3Ed__50_MoveNext_mA22A5F8237DBBDF9B5855B702A3DF596910DF9AA,
 	U3CInitializeComponentsU3Ed__50_SetStateMachine_mB229F5934DE0A2A91D058BC83924D27F494B002A,
 	U3CInitializeProjectConfigAsyncU3Ed__55_MoveNext_mBDBFBCA4B6C6E3DFACEED82565499257A1160C8B,
 	U3CInitializeProjectConfigAsyncU3Ed__55_SetStateMachine_m659B85FF4B20C038298A4C252900DBE33495AC51,
 };
+extern void U3CCreateDiagnosticsComponentsU3Ed__64_MoveNext_m9D74F3BC99F185517AC81A8859B7BCAE4AB91569_AdjustorThunk (void);
+extern void U3CCreateDiagnosticsComponentsU3Ed__64_SetStateMachine_mABE4FFD6D4BD134168DCFFA4CC238F20821EF867_AdjustorThunk (void);
 extern void U3CGenerateProjectConfigurationAsyncU3Ed__56_MoveNext_m9EE8776DA935BC2D7ACE71EF55F5A87FC015C7AD_AdjustorThunk (void);
 extern void U3CGenerateProjectConfigurationAsyncU3Ed__56_SetStateMachine_mE67BE1C4F66E372FC0958636F492ED07ED591AAA_AdjustorThunk (void);
 extern void U3CGetSerializedConfigOrEmptyAsyncU3Ed__57_MoveNext_m459F2568CD4B9F5ECEA9B367AE7C8E48DFFE547F_AdjustorThunk (void);
 extern void U3CGetSerializedConfigOrEmptyAsyncU3Ed__57_SetStateMachine_m3365ABE2522FE2D2895CF78DB19EBEEFEA54AC26_AdjustorThunk (void);
+extern void U3CGetSerializedProjectConfigurationAsyncU3Ed__66_MoveNext_mE10221C7CB1CCFB597C1ED45016C76B0C96C4E8A_AdjustorThunk (void);
+extern void U3CGetSerializedProjectConfigurationAsyncU3Ed__66_SetStateMachine_m1021F02A43B6558F4A3FD254C9DCCDC8AE44FC10_AdjustorThunk (void);
 extern void U3CInitializeComponentsU3Ed__50_MoveNext_mA22A5F8237DBBDF9B5855B702A3DF596910DF9AA_AdjustorThunk (void);
 extern void U3CInitializeComponentsU3Ed__50_SetStateMachine_mB229F5934DE0A2A91D058BC83924D27F494B002A_AdjustorThunk (void);
 extern void U3CInitializeProjectConfigAsyncU3Ed__55_MoveNext_mBDBFBCA4B6C6E3DFACEED82565499257A1160C8B_AdjustorThunk (void);
 extern void U3CInitializeProjectConfigAsyncU3Ed__55_SetStateMachine_m659B85FF4B20C038298A4C252900DBE33495AC51_AdjustorThunk (void);
-static Il2CppTokenAdjustorThunkPair s_adjustorThunks[8] = 
+static Il2CppTokenAdjustorThunkPair s_adjustorThunks[12] = 
 {
-	{ 0x0600002A, U3CGenerateProjectConfigurationAsyncU3Ed__56_MoveNext_m9EE8776DA935BC2D7ACE71EF55F5A87FC015C7AD_AdjustorThunk },
-	{ 0x0600002B, U3CGenerateProjectConfigurationAsyncU3Ed__56_SetStateMachine_mE67BE1C4F66E372FC0958636F492ED07ED591AAA_AdjustorThunk },
-	{ 0x0600002C, U3CGetSerializedConfigOrEmptyAsyncU3Ed__57_MoveNext_m459F2568CD4B9F5ECEA9B367AE7C8E48DFFE547F_AdjustorThunk },
-	{ 0x0600002D, U3CGetSerializedConfigOrEmptyAsyncU3Ed__57_SetStateMachine_m3365ABE2522FE2D2895CF78DB19EBEEFEA54AC26_AdjustorThunk },
-	{ 0x0600002E, U3CInitializeComponentsU3Ed__50_MoveNext_mA22A5F8237DBBDF9B5855B702A3DF596910DF9AA_AdjustorThunk },
-	{ 0x0600002F, U3CInitializeComponentsU3Ed__50_SetStateMachine_mB229F5934DE0A2A91D058BC83924D27F494B002A_AdjustorThunk },
-	{ 0x06000030, U3CInitializeProjectConfigAsyncU3Ed__55_MoveNext_mBDBFBCA4B6C6E3DFACEED82565499257A1160C8B_AdjustorThunk },
-	{ 0x06000031, U3CInitializeProjectConfigAsyncU3Ed__55_SetStateMachine_m659B85FF4B20C038298A4C252900DBE33495AC51_AdjustorThunk },
+	{ 0x0600002C, U3CCreateDiagnosticsComponentsU3Ed__64_MoveNext_m9D74F3BC99F185517AC81A8859B7BCAE4AB91569_AdjustorThunk },
+	{ 0x0600002D, U3CCreateDiagnosticsComponentsU3Ed__64_SetStateMachine_mABE4FFD6D4BD134168DCFFA4CC238F20821EF867_AdjustorThunk },
+	{ 0x0600002E, U3CGenerateProjectConfigurationAsyncU3Ed__56_MoveNext_m9EE8776DA935BC2D7ACE71EF55F5A87FC015C7AD_AdjustorThunk },
+	{ 0x0600002F, U3CGenerateProjectConfigurationAsyncU3Ed__56_SetStateMachine_mE67BE1C4F66E372FC0958636F492ED07ED591AAA_AdjustorThunk },
+	{ 0x06000030, U3CGetSerializedConfigOrEmptyAsyncU3Ed__57_MoveNext_m459F2568CD4B9F5ECEA9B367AE7C8E48DFFE547F_AdjustorThunk },
+	{ 0x06000031, U3CGetSerializedConfigOrEmptyAsyncU3Ed__57_SetStateMachine_m3365ABE2522FE2D2895CF78DB19EBEEFEA54AC26_AdjustorThunk },
+	{ 0x06000032, U3CGetSerializedProjectConfigurationAsyncU3Ed__66_MoveNext_mE10221C7CB1CCFB597C1ED45016C76B0C96C4E8A_AdjustorThunk },
+	{ 0x06000033, U3CGetSerializedProjectConfigurationAsyncU3Ed__66_SetStateMachine_m1021F02A43B6558F4A3FD254C9DCCDC8AE44FC10_AdjustorThunk },
+	{ 0x06000034, U3CInitializeComponentsU3Ed__50_MoveNext_mA22A5F8237DBBDF9B5855B702A3DF596910DF9AA_AdjustorThunk },
+	{ 0x06000035, U3CInitializeComponentsU3Ed__50_SetStateMachine_mB229F5934DE0A2A91D058BC83924D27F494B002A_AdjustorThunk },
+	{ 0x06000036, U3CInitializeProjectConfigAsyncU3Ed__55_MoveNext_mBDBFBCA4B6C6E3DFACEED82565499257A1160C8B_AdjustorThunk },
+	{ 0x06000037, U3CInitializeProjectConfigAsyncU3Ed__55_SetStateMachine_m659B85FF4B20C038298A4C252900DBE33495AC51_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[49] = 
+static const int32_t s_InvokerIndices[55] = 
 {
-	3861,
-	3135,
-	3861,
-	3135,
-	3861,
-	3135,
-	3861,
-	3135,
-	3861,
-	3135,
-	3861,
-	3135,
-	3861,
-	3135,
-	3861,
-	3135,
-	3861,
-	3135,
-	3861,
-	3135,
-	6449,
-	3135,
-	3135,
-	2021,
-	2021,
-	2021,
-	2180,
-	4056,
-	4056,
-	4056,
-	2021,
-	2021,
-	6383,
-	3135,
-	3135,
-	4056,
-	4056,
-	3135,
-	4056,
-	3135,
-	5985,
-	4056,
-	3135,
-	4056,
-	3135,
-	4056,
-	3135,
-	4056,
-	3135,
+	7080,
+	5672,
+	7080,
+	5672,
+	7080,
+	5672,
+	7080,
+	5672,
+	7080,
+	5672,
+	7080,
+	5672,
+	7080,
+	5672,
+	7080,
+	5672,
+	7080,
+	5672,
+	7080,
+	5672,
+	10694,
+	5672,
+	5672,
+	3642,
+	3642,
+	3642,
+	3948,
+	7405,
+	7405,
+	7405,
+	3642,
+	3642,
+	10570,
+	5672,
+	5672,
+	7405,
+	7405,
+	5672,
+	7405,
+	3642,
+	3642,
+	5672,
+	9972,
+	7405,
+	5672,
+	7405,
+	5672,
+	7405,
+	5672,
+	7405,
+	5672,
+	7405,
+	5672,
+	7405,
+	5672,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Unity_Services_Core_Registration_CodeGenModule;
 const Il2CppCodeGenModule g_Unity_Services_Core_Registration_CodeGenModule = 
 {
 	"Unity.Services.Core.Registration.dll",
-	49,
+	55,
 	s_methodPointers,
-	8,
+	12,
 	s_adjustorThunks,
 	s_InvokerIndices,
 	0,
