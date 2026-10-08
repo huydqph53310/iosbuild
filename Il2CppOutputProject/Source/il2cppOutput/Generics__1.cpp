@@ -1417,7 +1417,7 @@ struct Action_1_t66C5360772D5503D6DBDB6F6B03252BA94E530B6;
 struct Action_1_tD8CB07CA58902BF665659519C88AFF6438B41EB7;
 struct Action_1_t2BA37AA72AA657085D7ED77E68AB553D8234FE07;
 struct Action_1_t8EAD502E8E39CF881F9DB10DDD25D6D7826B0CC8;
-struct Action_1_t071FF4DA798B042154F3A85BAB87B166C659BDFF;
+struct Action_1_tCEAFC853834E15B68A086FD05D261F1ACA577A50;
 struct Action_1_t49F19F6D8F6FE90ECA808F2608FB278D414DD05A;
 struct Action_1_tD0FA38A7D0A854F371F5F2FB29A2C3E7E344C862;
 struct Action_10_t5AB83F30FC9B5D177FF5DEE61C5B56BFF56E7381;
@@ -4410,7 +4410,7 @@ struct ColliderType_t4C26FB284A330CAD69E47FFD734C9C778E077692
 {
 	int32_t ___value__;
 };
-struct lIlIlIIIIIIIlIlllIIIIlIlIIlIIIIIlIllIIllIIllllllllIllIIIIIIllIIlIlIIIlIl_t26EB21428AAE4114A06C316C04419CBB69A4446B 
+struct llIlIIlllIllIllllIIIlllIllIIllIlIlllIlllIlIllIIlIIIIIlIlllIllIlIIllllIll_tE9D503FDCD91FC561EDCB655B7E5C4ADA925AD0C 
 {
 	int32_t ___value__;
 };
@@ -5276,23 +5276,23 @@ struct AssetEntry_tEB6FC90E5BB63DCA4FF932F2D64595339A28806D_marshaled_com
 	EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___m_EntityId;
 	Type_t* ___m_CachedType;
 };
-struct llIIllIlIlIIIllIllIlllIlIIIIlIIlIIllIIlIlIllllIlIllIIIIllIIIIIlllIlIllIl_t6C93794D781F68613ACF8EC2A52672B5D1197AC5 
+struct lllIllIIIllIIIIIIIlIIIlllIllllIIIlIlIllllIlIIllllIIllIIlIIIIIIIIlIllllIl_t195F3D3A97BA9C3CB0CD1A7AC624E44CF6A75FFB 
 {
-	bool ___lIIlIlIIIIlIllIIlIlIlIIllIIIIlIlIlIIIllIIIlIIlIIlIIIlllIIIllIlllIIlIlIlI;
-	int32_t ___lIllIllIlIIlIlIIllllllIlIlIlIIlIlIllllIlIIllIIllIlIIIIIIIlIlIIIlIlIlIIIl;
-	String_t* ___lIlllIIIIlIlIIIIIIllIIlIIIIIIlllIlIIIIIIlIIllIllllllIIIlllllIIllIllllIlI;
+	bool ___lllIIIIlIIllIlllllIlIIIlllIlllIlIIlIlIlIlllIIIIlIllIlIlIIIlIIlllIIlIIlIl;
+	int32_t ___llIlIlIlIlIlIllIIIIlIIllllIlIlllIIllIIllllIllIllllIlllllIlIlIlIIllIlIIII;
+	String_t* ___lllllllllIllIIIllIIllllIIIIlIlllllIlllIlIllIlllIIlIIlIlIlllIlIllIlIlIlII;
 };
-struct llIIllIlIlIIIllIllIlllIlIIIIlIIlIIllIIlIlIllllIlIllIIIIllIIIIIlllIlIllIl_t6C93794D781F68613ACF8EC2A52672B5D1197AC5_marshaled_pinvoke
+struct lllIllIIIllIIIIIIIlIIIlllIllllIIIlIlIllllIlIIllllIIllIIlIIIIIIIIlIllllIl_t195F3D3A97BA9C3CB0CD1A7AC624E44CF6A75FFB_marshaled_pinvoke
 {
-	int32_t ___lIIlIlIIIIlIllIIlIlIlIIllIIIIlIlIlIIIllIIIlIIlIIlIIIlllIIIllIlllIIlIlIlI;
-	int32_t ___lIllIllIlIIlIlIIllllllIlIlIlIIlIlIllllIlIIllIIllIlIIIIIIIlIlIIIlIlIlIIIl;
-	char* ___lIlllIIIIlIlIIIIIIllIIlIIIIIIlllIlIIIIIIlIIllIllllllIIIlllllIIllIllllIlI;
+	int32_t ___lllIIIIlIIllIlllllIlIIIlllIlllIlIIlIlIlIlllIIIIlIllIlIlIIIlIIlllIIlIIlIl;
+	int32_t ___llIlIlIlIlIlIllIIIIlIIllllIlIlllIIllIIllllIllIllllIlllllIlIlIlIIllIlIIII;
+	char* ___lllllllllIllIIIllIIllllIIIIlIlllllIlllIlIllIlllIIlIIlIlIlllIlIllIlIlIlII;
 };
-struct llIIllIlIlIIIllIllIlllIlIIIIlIIlIIllIIlIlIllllIlIllIIIIllIIIIIlllIlIllIl_t6C93794D781F68613ACF8EC2A52672B5D1197AC5_marshaled_com
+struct lllIllIIIllIIIIIIIlIIIlllIllllIIIlIlIllllIlIIllllIIllIIlIIIIIIIIlIllllIl_t195F3D3A97BA9C3CB0CD1A7AC624E44CF6A75FFB_marshaled_com
 {
-	int32_t ___lIIlIlIIIIlIllIIlIlIlIIllIIIIlIlIlIIIllIIIlIIlIIlIIIlllIIIllIlllIIlIlIlI;
-	int32_t ___lIllIllIlIIlIlIIllllllIlIlIlIIlIlIllllIlIIllIIllIlIIIIIIIlIlIIIlIlIlIIIl;
-	Il2CppChar* ___lIlllIIIIlIlIIIIIIllIIlIIIIIIlllIlIIIIIIlIIllIllllllIIIlllllIIllIllllIlI;
+	int32_t ___lllIIIIlIIllIlllllIlIIIlllIlllIlIIlIlIlIlllIIIIlIllIlIlIIIlIIlllIIlIIlIl;
+	int32_t ___llIlIlIlIlIlIllIIIIlIIllllIlIlllIIllIIllllIllIllllIlllllIlIlIlIIllIlIIII;
+	Il2CppChar* ___lllllllllIllIIIllIIllllIIIIlIlllllIlllIlIllIlllIIlIIlIlIlllIlIllIlIlIlII;
 };
 struct EntryProcessingInfo_tE4803801829E2739380552B9DE313B056A9C9289 
 {
@@ -5699,7 +5699,7 @@ struct Action_1_t2BA37AA72AA657085D7ED77E68AB553D8234FE07  : public MulticastDel
 struct Action_1_t8EAD502E8E39CF881F9DB10DDD25D6D7826B0CC8  : public MulticastDelegate_t
 {
 };
-struct Action_1_t071FF4DA798B042154F3A85BAB87B166C659BDFF  : public MulticastDelegate_t
+struct Action_1_tCEAFC853834E15B68A086FD05D261F1ACA577A50  : public MulticastDelegate_t
 {
 };
 struct Action_1_t49F19F6D8F6FE90ECA808F2608FB278D414DD05A  : public MulticastDelegate_t
@@ -20622,28 +20622,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1_Invoke_m533C3E48511187104B91ECD
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-void Action_1_Invoke_mBF78137B869F95CAA9EB8EDE07D4A18D828A6C82_Multicast(Action_1_t071FF4DA798B042154F3A85BAB87B166C659BDFF* __this, llIIllIlIlIIIllIllIlllIlIIIIlIIlIIllIIlIlIllllIlIllIIIIllIIIIIlllIlIllIl_t6C93794D781F68613ACF8EC2A52672B5D1197AC5 ___0_obj, const RuntimeMethod* method)
+void Action_1_Invoke_m0ED77BE6D40F7A6C511E4D183BD4026775079C1E_Multicast(Action_1_tCEAFC853834E15B68A086FD05D261F1ACA577A50* __this, lllIllIIIllIIIIIIIlIIIlllIllllIIIlIlIllllIlIIllllIIllIIlIIIIIIIIlIllllIl_t195F3D3A97BA9C3CB0CD1A7AC624E44CF6A75FFB ___0_obj, const RuntimeMethod* method)
 {
 	il2cpp_array_size_t length = __this->___delegates->max_length;
 	Delegate_t** delegatesToInvoke = reinterpret_cast<Delegate_t**>(__this->___delegates->GetAddressAtUnchecked(0));
 	for (il2cpp_array_size_t i = 0; i < length; i++)
 	{
-		Action_1_t071FF4DA798B042154F3A85BAB87B166C659BDFF* currentDelegate = reinterpret_cast<Action_1_t071FF4DA798B042154F3A85BAB87B166C659BDFF*>(delegatesToInvoke[i]);
-		typedef void (*FunctionPointerType) (RuntimeObject*, llIIllIlIlIIIllIllIlllIlIIIIlIIlIIllIIlIlIllllIlIllIIIIllIIIIIlllIlIllIl_t6C93794D781F68613ACF8EC2A52672B5D1197AC5, const RuntimeMethod*);
+		Action_1_tCEAFC853834E15B68A086FD05D261F1ACA577A50* currentDelegate = reinterpret_cast<Action_1_tCEAFC853834E15B68A086FD05D261F1ACA577A50*>(delegatesToInvoke[i]);
+		typedef void (*FunctionPointerType) (RuntimeObject*, lllIllIIIllIIIIIIIlIIIlllIllllIIIlIlIllllIlIIllllIIllIIlIIIIIIIIlIllllIl_t195F3D3A97BA9C3CB0CD1A7AC624E44CF6A75FFB, const RuntimeMethod*);
 		((FunctionPointerType)currentDelegate->___invoke_impl)((Il2CppObject*)currentDelegate->___method_code, ___0_obj, reinterpret_cast<RuntimeMethod*>(currentDelegate->___method));
 	}
 }
-void Action_1_Invoke_mBF78137B869F95CAA9EB8EDE07D4A18D828A6C82_OpenInst(Action_1_t071FF4DA798B042154F3A85BAB87B166C659BDFF* __this, llIIllIlIlIIIllIllIlllIlIIIIlIIlIIllIIlIlIllllIlIllIIIIllIIIIIlllIlIllIl_t6C93794D781F68613ACF8EC2A52672B5D1197AC5 ___0_obj, const RuntimeMethod* method)
+void Action_1_Invoke_m0ED77BE6D40F7A6C511E4D183BD4026775079C1E_OpenInst(Action_1_tCEAFC853834E15B68A086FD05D261F1ACA577A50* __this, lllIllIIIllIIIIIIIlIIIlllIllllIIIlIlIllllIlIIllllIIllIIlIIIIIIIIlIllllIl_t195F3D3A97BA9C3CB0CD1A7AC624E44CF6A75FFB ___0_obj, const RuntimeMethod* method)
 {
-	typedef void (*FunctionPointerType) (llIIllIlIlIIIllIllIlllIlIIIIlIIlIIllIIlIlIllllIlIllIIIIllIIIIIlllIlIllIl_t6C93794D781F68613ACF8EC2A52672B5D1197AC5, const RuntimeMethod*);
+	typedef void (*FunctionPointerType) (lllIllIIIllIIIIIIIlIIIlllIllllIIIlIlIllllIlIIllllIIllIIlIIIIIIIIlIllllIl_t195F3D3A97BA9C3CB0CD1A7AC624E44CF6A75FFB, const RuntimeMethod*);
 	((FunctionPointerType)__this->___method_ptr)(___0_obj, method);
 }
-void Action_1_Invoke_mBF78137B869F95CAA9EB8EDE07D4A18D828A6C82_OpenStatic(Action_1_t071FF4DA798B042154F3A85BAB87B166C659BDFF* __this, llIIllIlIlIIIllIllIlllIlIIIIlIIlIIllIIlIlIllllIlIllIIIIllIIIIIlllIlIllIl_t6C93794D781F68613ACF8EC2A52672B5D1197AC5 ___0_obj, const RuntimeMethod* method)
+void Action_1_Invoke_m0ED77BE6D40F7A6C511E4D183BD4026775079C1E_OpenStatic(Action_1_tCEAFC853834E15B68A086FD05D261F1ACA577A50* __this, lllIllIIIllIIIIIIIlIIIlllIllllIIIlIlIllllIlIIllllIIllIIlIIIIIIIIlIllllIl_t195F3D3A97BA9C3CB0CD1A7AC624E44CF6A75FFB ___0_obj, const RuntimeMethod* method)
 {
-	typedef void (*FunctionPointerType) (llIIllIlIlIIIllIllIlllIlIIIIlIIlIIllIIlIlIllllIlIllIIIIllIIIIIlllIlIllIl_t6C93794D781F68613ACF8EC2A52672B5D1197AC5, const RuntimeMethod*);
+	typedef void (*FunctionPointerType) (lllIllIIIllIIIIIIIlIIIlllIllllIIIlIlIllllIlIIllllIIllIIlIIIIIIIIlIllllIl_t195F3D3A97BA9C3CB0CD1A7AC624E44CF6A75FFB, const RuntimeMethod*);
 	((FunctionPointerType)__this->___method_ptr)(___0_obj, method);
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1__ctor_m53BC64DD7FF79DB57EF11BB109D2813A185B0FBB_gshared (Action_1_t071FF4DA798B042154F3A85BAB87B166C659BDFF* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1__ctor_mC1236CDB6EB331E120DA377C5B52127B12349B97_gshared (Action_1_tCEAFC853834E15B68A086FD05D261F1ACA577A50* __this, RuntimeObject* ___0_object, intptr_t ___1_method, const RuntimeMethod* method) 
 {
 	__this->___method_ptr = (intptr_t)il2cpp_codegen_get_method_pointer((RuntimeMethod*)___1_method);
 	__this->___method = ___1_method;
@@ -20655,7 +20655,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1__ctor_m53BC64DD7FF79DB57EF11BB1
 	{
 		bool isOpen = parameterCount == 1;
 		if (isOpen)
-			__this->___invoke_impl = (intptr_t)&Action_1_Invoke_mBF78137B869F95CAA9EB8EDE07D4A18D828A6C82_OpenStatic;
+			__this->___invoke_impl = (intptr_t)&Action_1_Invoke_m0ED77BE6D40F7A6C511E4D183BD4026775079C1E_OpenStatic;
 		else
 			{
 				__this->___invoke_impl = __this->___method_ptr;
@@ -20669,11 +20669,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1__ctor_m53BC64DD7FF79DB57EF11BB1
 		__this->___invoke_impl = __this->___method_ptr;
 		__this->___method_code = (intptr_t)__this->___m_target;
 	}
-	__this->___extra_arg = (intptr_t)&Action_1_Invoke_mBF78137B869F95CAA9EB8EDE07D4A18D828A6C82_Multicast;
+	__this->___extra_arg = (intptr_t)&Action_1_Invoke_m0ED77BE6D40F7A6C511E4D183BD4026775079C1E_Multicast;
 }
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1_Invoke_mBF78137B869F95CAA9EB8EDE07D4A18D828A6C82_gshared (Action_1_t071FF4DA798B042154F3A85BAB87B166C659BDFF* __this, llIIllIlIlIIIllIllIlllIlIIIIlIIlIIllIIlIlIllllIlIllIIIIllIIIIIlllIlIllIl_t6C93794D781F68613ACF8EC2A52672B5D1197AC5 ___0_obj, const RuntimeMethod* method) 
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Action_1_Invoke_m0ED77BE6D40F7A6C511E4D183BD4026775079C1E_gshared (Action_1_tCEAFC853834E15B68A086FD05D261F1ACA577A50* __this, lllIllIIIllIIIIIIIlIIIlllIllllIIIlIlIllllIlIIllllIIllIIlIIIIIIIIlIllllIl_t195F3D3A97BA9C3CB0CD1A7AC624E44CF6A75FFB ___0_obj, const RuntimeMethod* method) 
 {
-	typedef void (*FunctionPointerType) (RuntimeObject*, llIIllIlIlIIIllIllIlllIlIIIIlIIlIIllIIlIlIllllIlIllIIIIllIIIIIlllIlIllIl_t6C93794D781F68613ACF8EC2A52672B5D1197AC5, const RuntimeMethod*);
+	typedef void (*FunctionPointerType) (RuntimeObject*, lllIllIIIllIIIIIIIlIIIlllIllllIIIlIlIllllIlIIllllIIllIIlIIIIIIIIlIllllIl_t195F3D3A97BA9C3CB0CD1A7AC624E44CF6A75FFB, const RuntimeMethod*);
 	((FunctionPointerType)__this->___invoke_impl)((Il2CppObject*)__this->___method_code, ___0_obj, reinterpret_cast<RuntimeMethod*>(__this->___method));
 }
 #ifdef __clang__
