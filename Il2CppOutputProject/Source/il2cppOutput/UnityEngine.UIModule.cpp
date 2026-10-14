@@ -3282,6 +3282,31 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasRenderer_CreateUIVertexStream_mAC5
 		return;
 	}
 }
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasRenderer_AddUIVertexStream_mB37E02F228960D7A0FBEB8E4843121D53FF9F6BB (List_1_t09F8990ACE8783E311B473B0090859BA9C00FC2A* ___0_verts, List_1_t77B94703E05C519A9010DD0614F757F974E1CD8B* ___1_positions, List_1_t3517D52AE25CA3B19051E691E9C06ED03A3AB9B8* ___2_colors, List_1_tF42FEB6C3B18B7E7C8F2DE1FEBA00D2491736317* ___3_uv0S, List_1_tF42FEB6C3B18B7E7C8F2DE1FEBA00D2491736317* ___4_uv1S, List_1_tF42FEB6C3B18B7E7C8F2DE1FEBA00D2491736317* ___5_uv2S, List_1_tF42FEB6C3B18B7E7C8F2DE1FEBA00D2491736317* ___6_uv3S, List_1_t77B94703E05C519A9010DD0614F757F974E1CD8B* ___7_normals, List_1_tF42FEB6C3B18B7E7C8F2DE1FEBA00D2491736317* ___8_tangents, List_1_tF42FEB6C3B18B7E7C8F2DE1FEBA00D2491736317* ___9_prevPositions, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&NoAllocHelpers_CreateReadOnlySpan_TisUIVertex_tF5C663F4BBC786C9D56C28016FF66E6C6BF85207_mB02064CCF9FB6928265BE2F0BE6D2861DCDCA976_RuntimeMethod_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		List_1_t09F8990ACE8783E311B473B0090859BA9C00FC2A* L_0 = ___0_verts;
+		ReadOnlySpan_1_t7F209BEB92ACAD70FF48E8A47CD55492BB699A55 L_1;
+		L_1 = NoAllocHelpers_CreateReadOnlySpan_TisUIVertex_tF5C663F4BBC786C9D56C28016FF66E6C6BF85207_mB02064CCF9FB6928265BE2F0BE6D2861DCDCA976_inline(L_0, NoAllocHelpers_CreateReadOnlySpan_TisUIVertex_tF5C663F4BBC786C9D56C28016FF66E6C6BF85207_mB02064CCF9FB6928265BE2F0BE6D2861DCDCA976_RuntimeMethod_var);
+		List_1_t77B94703E05C519A9010DD0614F757F974E1CD8B* L_2 = ___1_positions;
+		List_1_t3517D52AE25CA3B19051E691E9C06ED03A3AB9B8* L_3 = ___2_colors;
+		List_1_tF42FEB6C3B18B7E7C8F2DE1FEBA00D2491736317* L_4 = ___3_uv0S;
+		List_1_tF42FEB6C3B18B7E7C8F2DE1FEBA00D2491736317* L_5 = ___4_uv1S;
+		List_1_tF42FEB6C3B18B7E7C8F2DE1FEBA00D2491736317* L_6 = ___5_uv2S;
+		List_1_tF42FEB6C3B18B7E7C8F2DE1FEBA00D2491736317* L_7 = ___6_uv3S;
+		List_1_t77B94703E05C519A9010DD0614F757F974E1CD8B* L_8 = ___7_normals;
+		List_1_tF42FEB6C3B18B7E7C8F2DE1FEBA00D2491736317* L_9 = ___8_tangents;
+		List_1_tF42FEB6C3B18B7E7C8F2DE1FEBA00D2491736317* L_10 = ___9_prevPositions;
+		CanvasRenderer_SplitUIVertexStreamsInternal_m04FE6E953A32084A556EBD7B0900F9F37618149A(L_1, L_2, L_3, L_4, L_5, L_6, L_7, L_8, L_9, L_10, NULL);
+		return;
+	}
+}
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void CanvasRenderer_SplitIndicesStreamsInternal_m985857FE1E28DC32DEE5BF25F48AB11C461573E7 (List_1_t09F8990ACE8783E311B473B0090859BA9C00FC2A* ___0_verts, List_1_t05915E9237850A58106982B7FE4BC5DA4E872E73* ___1_indices, const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6306,6 +6331,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51E
 		return L_0;
 	}
 }
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Canvas_set_externBeginRenderOverlays_m15382EED4DE4FD270EEAF103F066105E59ACAB03 (Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* ___0_value, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* L_0 = ___0_value;
+		((Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_StaticFields*)il2cpp_codegen_static_fields_for(Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_il2cpp_TypeInfo_var))->___U3CexternBeginRenderOverlaysU3Ek__BackingField = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&((Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_StaticFields*)il2cpp_codegen_static_fields_for(Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_il2cpp_TypeInfo_var))->___U3CexternBeginRenderOverlaysU3Ek__BackingField), (void*)L_0);
+		return;
+	}
+}
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Action_2_tD7438462601D3939500ED67463331FE00CFFBDB8* Canvas_get_externRenderOverlaysBefore_m2F2E095C9C692FB560FD13D5C9EDFB4E75DBB278 (const RuntimeMethod* method) 
 {
 	static bool s_Il2CppMethodInitialized;
@@ -6317,6 +6357,21 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Action_2_tD7438462601D3939500ED67463331FE00CF
 	{
 		Action_2_tD7438462601D3939500ED67463331FE00CFFBDB8* L_0 = ((Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_StaticFields*)il2cpp_codegen_static_fields_for(Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_il2cpp_TypeInfo_var))->___U3CexternRenderOverlaysBeforeU3Ek__BackingField;
 		return L_0;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Canvas_set_externRenderOverlaysBefore_mFE0A5C7FCDB2AA8FFE6D8CFDE128A5C3F6E19735 (Action_2_tD7438462601D3939500ED67463331FE00CFFBDB8* ___0_value, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Action_2_tD7438462601D3939500ED67463331FE00CFFBDB8* L_0 = ___0_value;
+		((Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_StaticFields*)il2cpp_codegen_static_fields_for(Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_il2cpp_TypeInfo_var))->___U3CexternRenderOverlaysBeforeU3Ek__BackingField = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&((Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_StaticFields*)il2cpp_codegen_static_fields_for(Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_il2cpp_TypeInfo_var))->___U3CexternRenderOverlaysBeforeU3Ek__BackingField), (void*)L_0);
+		return;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* Canvas_get_externEndRenderOverlays_m57060A5AAD1A2A1A8D5F8BA75BB4C604BFC94E16 (const RuntimeMethod* method) 
@@ -6331,6 +6386,29 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51E
 		Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* L_0 = ((Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_StaticFields*)il2cpp_codegen_static_fields_for(Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_il2cpp_TypeInfo_var))->___U3CexternEndRenderOverlaysU3Ek__BackingField;
 		return L_0;
 	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Canvas_set_externEndRenderOverlays_mA48664910ECE4995245902DDE755C5C18BEF8E32 (Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* ___0_value, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		Action_1_tD69A6DC9FBE94131E52F5A73B2A9D4AB51EEC404* L_0 = ___0_value;
+		((Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_StaticFields*)il2cpp_codegen_static_fields_for(Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_il2cpp_TypeInfo_var))->___U3CexternEndRenderOverlaysU3Ek__BackingField = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&((Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_StaticFields*)il2cpp_codegen_static_fields_for(Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26_il2cpp_TypeInfo_var))->___U3CexternEndRenderOverlaysU3Ek__BackingField), (void*)L_0);
+		return;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Canvas_SetExternalCanvasEnabled_m13155750F26485027E5558C86AC55579B4CD7B6B (bool ___0_enabled, const RuntimeMethod* method) 
+{
+	typedef void (*Canvas_SetExternalCanvasEnabled_m13155750F26485027E5558C86AC55579B4CD7B6B_ftn) (bool);
+	static Canvas_SetExternalCanvasEnabled_m13155750F26485027E5558C86AC55579B4CD7B6B_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (Canvas_SetExternalCanvasEnabled_m13155750F26485027E5558C86AC55579B4CD7B6B_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.Canvas::SetExternalCanvasEnabled(System.Boolean)");
+	_il2cpp_icall_func(___0_enabled);
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Camera_tA92CC927D7439999BC82DBEDC0AA45B470F9E184* Canvas_get_worldCamera_mD2FDE13B61A5213F4E64B40008EB0A8D2D07B853 (Canvas_t2DB4CEFDFF732884866C83F11ABF75F5AE8FFB26* __this, const RuntimeMethod* method) 
 {

@@ -7718,7 +7718,7 @@ IL_00e4:
 		int32_t L_47 = L_46->___bytesUsed;
 		NullCheck(L_38);
 		int32_t L_48;
-		L_48 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(32, L_38, L_40, L_42, ((int32_t)il2cpp_codegen_subtract(L_45, L_47)));
+		L_48 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33, L_38, L_40, L_42, ((int32_t)il2cpp_codegen_subtract(L_45, L_47)));
 		V_4 = L_48;
 		int32_t L_49 = V_4;
 		if (L_49)
@@ -9618,7 +9618,7 @@ IL_0312:
 		int32_t L_153 = L_152->___bytesUsed;
 		NullCheck(L_144);
 		int32_t L_154;
-		L_154 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(32, L_144, L_146, L_148, ((int32_t)il2cpp_codegen_subtract(L_151, L_153)));
+		L_154 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(33, L_144, L_146, L_148, ((int32_t)il2cpp_codegen_subtract(L_151, L_153)));
 		V_10 = L_154;
 		int32_t L_155 = V_10;
 		if (L_155)

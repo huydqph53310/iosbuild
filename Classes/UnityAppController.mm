@@ -440,6 +440,12 @@ extern "C" void UnityCleanupTrampoline()
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
+    @try {
+        AVAudioSession* audioSession = [AVAudioSession sharedInstance];
+        [audioSession setCategory:AVAudioSessionCategoryPlayback error:nil];
+        [audioSession setActive:YES error:nil];
+    } @catch (NSException* e) {}
+
     ::printf("-> applicationDidFinishLaunching()\n");
     [self sceneValidation];
 
@@ -806,6 +812,15 @@ options:(UISceneConnectionOptions *)options
     return YES;
 }
 
+
+- (void)applicationDidEnterBackground:(UIApplication *)application
+{
+    [super applicationDidEnterBackground:application];
+    __block UIBackgroundTaskIdentifier bgTask = [application beginBackgroundTaskWithName:@"MobiArmy3KeepAlive" expirationHandler:^{
+        [application endBackgroundTask:bgTask];
+        bgTask = UIBackgroundTaskInvalid;
+    }];
+}
 @end
 
 

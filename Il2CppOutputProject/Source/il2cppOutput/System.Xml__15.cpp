@@ -20918,7 +20918,7 @@ IL_0125:
 	{
 		String_t* L_60 = ___3_value;
 		NullCheck(G_B16_1);
-		VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(22, G_B16_1, G_B16_0, L_60);
+		VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(23, G_B16_1, G_B16_0, L_60);
 		return;
 	}
 
@@ -21015,7 +21015,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XsdBuilder_StartChildren_mFFB54ACD171F51
 		Hashtable_tEFC3B6496E6747787D8BB761B51F2AE3A8CFFE2D* L_2 = __this->___namespaces;
 		NullCheck(L_2);
 		int32_t L_3;
-		L_3 = VirtualFuncInvoker0< int32_t >::Invoke(39, L_2);
+		L_3 = VirtualFuncInvoker0< int32_t >::Invoke(41, L_2);
 		if ((((int32_t)L_3) <= ((int32_t)0)))
 		{
 			goto IL_003b;

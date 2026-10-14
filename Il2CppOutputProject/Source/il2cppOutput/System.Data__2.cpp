@@ -209,6 +209,7 @@ struct DataRelationU5BU5D_t1640C9372BDC91DAE0359E08BE1E91AE48924FF0;
 struct DataRowU5BU5D_t2A0D4483B27757FE7345A2E7FE5727C7F77DE5D4;
 struct DataTableU5BU5D_tB4D0AEDE8374D42D9240002365B2F4600A13637F;
 struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771;
+struct EventDescriptorU5BU5D_t36B45BFB0000115B81C8C3AC07D472C02AE45B80;
 struct IndexU5BU5D_t093220D6400EEA6421F58DDB6D50CD4FA7C9BCA2;
 struct IndexFieldU5BU5D_t2E1FE07C5E6C8080FCF4908199FFDFEBA1EECA3E;
 struct Int32U5BU5D_t19C97395396A72ECAF310612F0760F165060314C;
@@ -278,6 +279,8 @@ struct DateTimeFormatInfo_t0457520F9FA7B5C8EAAEB3AD50413B6AEEB7458A;
 struct Delegate_t;
 struct DelegateData_t9B286B493293CD2D23A5B2B5EF0E5B1324C2B77E;
 struct EventArgs_t37273F03EAC87217701DD431B190FBD84AD7C377;
+struct EventDescriptor_t3EAC449428E29E0D0C8DE9FCC6494E5C05A3260A;
+struct EventDescriptorCollection_t5B373F7B3BB09FDD9287D4403AF4EC9283966E96;
 struct EventHandler_tC6323FD7E6163F965259C33D72612C0E5B9BAB82;
 struct EventHandlerList_t057D7531265C1DF014C8C83AF251E908D1A0B1C8;
 struct EventSource_tA86759A1E6F272632C299AAC181C0A67E5C52F25;
@@ -389,6 +392,7 @@ IL2CPP_EXTERN_C RuntimeClass* DataTableU5BU5D_tB4D0AEDE8374D42D9240002365B2F4600
 IL2CPP_EXTERN_C RuntimeClass* DataTable_t9240A0D6726299C55832BF4EE085C864A1CCBB07_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Dictionary_2_tA1C46A4AE8BF6F61CE13FCB4610037808EA8AB66_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* EventArgs_t37273F03EAC87217701DD431B190FBD84AD7C377_il2cpp_TypeInfo_var;
+IL2CPP_EXTERN_C RuntimeClass* EventDescriptorCollection_t5B373F7B3BB09FDD9287D4403AF4EC9283966E96_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Exception_t_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ForeignKeyConstraint_tBEE8801AF7B2F7F6C806B5347D18CEE1294A9062_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* Func_2_t7AF8146EC94DFCBB0F1B3E70111C1FB21D39F00E_il2cpp_TypeInfo_var;
@@ -719,6 +723,7 @@ struct DataRelationU5BU5D_t1640C9372BDC91DAE0359E08BE1E91AE48924FF0;
 struct DataRowU5BU5D_t2A0D4483B27757FE7345A2E7FE5727C7F77DE5D4;
 struct DataTableU5BU5D_tB4D0AEDE8374D42D9240002365B2F4600A13637F;
 struct DelegateU5BU5D_tC5AB7E8F745616680F337909D3A8E6C722CDF771;
+struct EventDescriptorU5BU5D_t36B45BFB0000115B81C8C3AC07D472C02AE45B80;
 struct IndexFieldU5BU5D_t2E1FE07C5E6C8080FCF4908199FFDFEBA1EECA3E;
 struct ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918;
 struct PropertyDescriptorU5BU5D_t773E52CC51A2ABE902F526B23CB417FBFF741321;
@@ -951,6 +956,16 @@ struct DataRowView_t51724505EADBB0C11EEA0252510644143191B23B  : public RuntimeOb
 };
 struct EventArgs_t37273F03EAC87217701DD431B190FBD84AD7C377  : public RuntimeObject
 {
+};
+struct EventDescriptorCollection_t5B373F7B3BB09FDD9287D4403AF4EC9283966E96  : public RuntimeObject
+{
+	EventDescriptorU5BU5D_t36B45BFB0000115B81C8C3AC07D472C02AE45B80* ____events;
+	StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* ____namedSort;
+	RuntimeObject* ____comparer;
+	bool ____eventsOwned;
+	bool ____needSort;
+	bool ____readOnly;
+	int32_t ___U3CCountU3Ek__BackingField;
 };
 struct EventSource_tA86759A1E6F272632C299AAC181C0A67E5C52F25  : public RuntimeObject
 {
@@ -1247,6 +1262,9 @@ struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2_marshaled_pinvoke
 {
 };
 struct Enum_t2A1A94B24E3B776EEF4E5E485E290BB9D4D072E2_marshaled_com
+{
+};
+struct EventDescriptor_t3EAC449428E29E0D0C8DE9FCC6494E5C05A3260A  : public MemberDescriptor_t1CEA84A7BBAFDB04A9E6E23F2FBEED59F01172A7
 {
 };
 struct ExpandableObjectConverter_t2D9FF3B389851F14034FBA07A57944EB27C18F63  : public TypeConverter_t5257E1653EB845D0044BBEDEB7B8AED7A061592C
@@ -1870,7 +1888,9 @@ struct DataView_t882C19B1455AFCE770D60A43A690096801824A50  : public MarshalByVal
 	DataRow_t4C2743279B40E332809F4E6EE3443B75E4C38388* ____addNewRow;
 	ListChangedEventArgs_tAAB4841B3E3BD67D39FBE075E920B653B5F35442* ____addNewMoved;
 	ListChangedEventHandler_tDBF36F3E2C6B7538106878E1D5A7553C5EA77616* ____onListChanged;
+	String_t* ____delayedSort;
 	int32_t ____delayedRecordStates;
+	bool ____fInitInProgress;
 	bool ____fEndInitInProgress;
 	Dictionary_2_t25892D6280676AF8A4362752A8B5485A3347E57B* ____rowViewCache;
 	Dictionary_2_t25892D6280676AF8A4362752A8B5485A3347E57B* ____rowViewBuffer;
@@ -2052,6 +2072,10 @@ struct DataRowView_t51724505EADBB0C11EEA0252510644143191B23B_StaticFields
 struct EventArgs_t37273F03EAC87217701DD431B190FBD84AD7C377_StaticFields
 {
 	EventArgs_t37273F03EAC87217701DD431B190FBD84AD7C377* ___Empty;
+};
+struct EventDescriptorCollection_t5B373F7B3BB09FDD9287D4403AF4EC9283966E96_StaticFields
+{
+	EventDescriptorCollection_t5B373F7B3BB09FDD9287D4403AF4EC9283966E96* ___Empty;
 };
 struct Hashtable_tEFC3B6496E6747787D8BB761B51F2AE3A8CFFE2D_StaticFields
 {
@@ -2573,6 +2597,40 @@ struct DataRowU5BU5D_t2A0D4483B27757FE7345A2E7FE5727C7F77DE5D4  : public Runtime
 		return m_Items + index;
 	}
 	inline void SetAtUnchecked(il2cpp_array_size_t index, DataRow_t4C2743279B40E332809F4E6EE3443B75E4C38388* value)
+	{
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+};
+struct EventDescriptorU5BU5D_t36B45BFB0000115B81C8C3AC07D472C02AE45B80  : public RuntimeArray
+{
+	ALIGN_FIELD (8) EventDescriptor_t3EAC449428E29E0D0C8DE9FCC6494E5C05A3260A* m_Items[1];
+
+	inline EventDescriptor_t3EAC449428E29E0D0C8DE9FCC6494E5C05A3260A* GetAt(il2cpp_array_size_t index) const
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items[index];
+	}
+	inline EventDescriptor_t3EAC449428E29E0D0C8DE9FCC6494E5C05A3260A** GetAddressAt(il2cpp_array_size_t index)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		return m_Items + index;
+	}
+	inline void SetAt(il2cpp_array_size_t index, EventDescriptor_t3EAC449428E29E0D0C8DE9FCC6494E5C05A3260A* value)
+	{
+		IL2CPP_ARRAY_BOUNDS_CHECK(index, (uint32_t)(this)->max_length);
+		m_Items[index] = value;
+		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
+	}
+	inline EventDescriptor_t3EAC449428E29E0D0C8DE9FCC6494E5C05A3260A* GetAtUnchecked(il2cpp_array_size_t index) const
+	{
+		return m_Items[index];
+	}
+	inline EventDescriptor_t3EAC449428E29E0D0C8DE9FCC6494E5C05A3260A** GetAddressAtUnchecked(il2cpp_array_size_t index)
+	{
+		return m_Items + index;
+	}
+	inline void SetAtUnchecked(il2cpp_array_size_t index, EventDescriptor_t3EAC449428E29E0D0C8DE9FCC6494E5C05A3260A* value)
 	{
 		m_Items[index] = value;
 		Il2CppCodeGenWriteBarrier((void**)m_Items + index, (void*)value);
@@ -3393,6 +3451,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DataView_SetDataViewManager_m1B91C695741
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR DataView_t882C19B1455AFCE770D60A43A690096801824A50* DataRowView_CreateChildView_m53469D24C317381111F1649EFD3A330D14F9324A (DataRowView_t51724505EADBB0C11EEA0252510644143191B23B* __this, DataRelation_tCB36A11AB39874353B080F3CD6432C4F9828C656* ___0_relation, bool ___1_followParent, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool DataRowView_get_IsNew_m4E97D24D23643437B41694A49F25913CB3A48DB1 (DataRowView_t51724505EADBB0C11EEA0252510644143191B23B* __this, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void DataView_FinishAddNew_m6BCF307627EAD55E56D10C19B7B039B5BFF1ACA5 (DataView_t882C19B1455AFCE770D60A43A690096801824A50* __this, bool ___0_success, const RuntimeMethod* method) ;
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void EventDescriptorCollection__ctor_m5B672594D0220F89AD3DFE0FBCDB34FED5B56CF3 (EventDescriptorCollection_t5B373F7B3BB09FDD9287D4403AF4EC9283966E96* __this, EventDescriptorU5BU5D_t36B45BFB0000115B81C8C3AC07D472C02AE45B80* ___0_events, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PropertyDescriptorCollection_tC4C2FA51126BD032E2E9A0472995F7FCAC6E70DE* DataTable_GetPropertyDescriptorCollection_mC9F32F002D01468B9DD5D512CDB0EC09A893FDF5 (DataTable_t9240A0D6726299C55832BF4EE085C864A1CCBB07* __this, AttributeU5BU5D_t0F73488E6F1249C889608E8DCC0BCC28A874E8F1* ___0_attributes, const RuntimeMethod* method) ;
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PropertyDescriptorCollection__ctor_m3D1AC0D2B3187A895AE8B64AC891251860D8C361 (PropertyDescriptorCollection_tC4C2FA51126BD032E2E9A0472995F7FCAC6E70DE* __this, PropertyDescriptorU5BU5D_t773E52CC51A2ABE902F526B23CB417FBFF741321* ___0_properties, const RuntimeMethod* method) ;
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR int32_t DataTableCollection_get_ObjectID_m5573EBAC8D40B37BE4F739836A4BC66F5E2E9EB5_inline (DataTableCollection_t9F8C02B7597B3B56A0DBB3313545C0AC3A4FE997* __this, const RuntimeMethod* method) ;
@@ -17133,7 +17192,7 @@ IL_00da:
 		PropertyCollection_t531D3CA9714C3D7818C1B1C139A9C4F04B73EE7C* L_60 = __this->____extendedProperties;
 		NullCheck(L_60);
 		RuntimeObject* L_61;
-		L_61 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(35, L_60);
+		L_61 = VirtualFuncInvoker0< RuntimeObject* >::Invoke(37, L_60);
 		NullCheck(L_61);
 		RuntimeObject* L_62;
 		L_62 = InterfaceFuncInvoker0< RuntimeObject* >::Invoke(0, IEnumerable_t6331596D5DD37C462B1B8D49CF6B319B00AB7131_il2cpp_TypeInfo_var, L_61);
@@ -17188,9 +17247,9 @@ IL_0129_1:
 				RuntimeObject* L_72 = V_9;
 				NullCheck(L_71);
 				RuntimeObject* L_73;
-				L_73 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(28, L_71, L_72);
+				L_73 = VirtualFuncInvoker1< RuntimeObject*, RuntimeObject* >::Invoke(29, L_71, L_72);
 				NullCheck(L_69);
-				VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(29, L_69, L_70, L_73);
+				VirtualActionInvoker2< RuntimeObject*, RuntimeObject* >::Invoke(30, L_69, L_70, L_73);
 			}
 
 IL_014d_1:
@@ -25484,7 +25543,7 @@ IL_0060:
 	{
 		RelatedView_t591696A54F587B0C81FED986F360C882C72C4B27* L_22 = V_0;
 		NullCheck(L_22);
-		VirtualActionInvoker3< String_t*, int32_t, RuntimeObject* >::Invoke(30, L_22, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, ((int32_t)22), (RuntimeObject*)NULL);
+		VirtualActionInvoker3< String_t*, int32_t, RuntimeObject* >::Invoke(47, L_22, _stringLiteralDA39A3EE5E6B4B0D3255BFEF95601890AFD80709, ((int32_t)22), (RuntimeObject*)NULL);
 		RelatedView_t591696A54F587B0C81FED986F360C882C72C4B27* L_23 = V_0;
 		DataView_t882C19B1455AFCE770D60A43A690096801824A50* L_24;
 		L_24 = DataRowView_get_DataView_mBC3FEAF75CDC536A1946498BC89622EF974584E3_inline(__this, NULL);
@@ -25686,10 +25745,68 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR AttributeCollection_tD55D3E17234E299E07B6071F
 		return L_0;
 	}
 }
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* DataRowView_System_ComponentModel_ICustomTypeDescriptor_GetClassName_m2C094690FB6C16418B1D12E338B820FF9AD4B0AA (DataRowView_t51724505EADBB0C11EEA0252510644143191B23B* __this, const RuntimeMethod* method) 
+{
+	{
+		return (String_t*)NULL;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* DataRowView_System_ComponentModel_ICustomTypeDescriptor_GetComponentName_mC76D6D632F9521A21F2B4AEE4B09668B8230A2BF (DataRowView_t51724505EADBB0C11EEA0252510644143191B23B* __this, const RuntimeMethod* method) 
+{
+	{
+		return (String_t*)NULL;
+	}
+}
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR TypeConverter_t5257E1653EB845D0044BBEDEB7B8AED7A061592C* DataRowView_System_ComponentModel_ICustomTypeDescriptor_GetConverter_mAA26D46F0EEA8BA01CEB33104AC1788506EA04E5 (DataRowView_t51724505EADBB0C11EEA0252510644143191B23B* __this, const RuntimeMethod* method) 
 {
 	{
 		return (TypeConverter_t5257E1653EB845D0044BBEDEB7B8AED7A061592C*)NULL;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR EventDescriptor_t3EAC449428E29E0D0C8DE9FCC6494E5C05A3260A* DataRowView_System_ComponentModel_ICustomTypeDescriptor_GetDefaultEvent_m6B2F6BE7A456A19F9AEA829F1ED9BE2221919A29 (DataRowView_t51724505EADBB0C11EEA0252510644143191B23B* __this, const RuntimeMethod* method) 
+{
+	{
+		return (EventDescriptor_t3EAC449428E29E0D0C8DE9FCC6494E5C05A3260A*)NULL;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PropertyDescriptor_t03F8CBE01C4EDA631BF9BE7D9EB32C8F30F13381* DataRowView_System_ComponentModel_ICustomTypeDescriptor_GetDefaultProperty_mC41890B4969E0BA8700BD5EB2A73589616342969 (DataRowView_t51724505EADBB0C11EEA0252510644143191B23B* __this, const RuntimeMethod* method) 
+{
+	{
+		return (PropertyDescriptor_t03F8CBE01C4EDA631BF9BE7D9EB32C8F30F13381*)NULL;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* DataRowView_System_ComponentModel_ICustomTypeDescriptor_GetEditor_m5B0E658012FD3771238DEF16EBD598EB8BFF5621 (DataRowView_t51724505EADBB0C11EEA0252510644143191B23B* __this, Type_t* ___0_editorBaseType, const RuntimeMethod* method) 
+{
+	{
+		return NULL;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR EventDescriptorCollection_t5B373F7B3BB09FDD9287D4403AF4EC9283966E96* DataRowView_System_ComponentModel_ICustomTypeDescriptor_GetEvents_m36F20F73838EA212BBC05B3912AB8FD93866DB2A (DataRowView_t51724505EADBB0C11EEA0252510644143191B23B* __this, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&EventDescriptorCollection_t5B373F7B3BB09FDD9287D4403AF4EC9283966E96_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		EventDescriptorCollection_t5B373F7B3BB09FDD9287D4403AF4EC9283966E96* L_0 = (EventDescriptorCollection_t5B373F7B3BB09FDD9287D4403AF4EC9283966E96*)il2cpp_codegen_object_new(EventDescriptorCollection_t5B373F7B3BB09FDD9287D4403AF4EC9283966E96_il2cpp_TypeInfo_var);
+		EventDescriptorCollection__ctor_m5B672594D0220F89AD3DFE0FBCDB34FED5B56CF3(L_0, (EventDescriptorU5BU5D_t36B45BFB0000115B81C8C3AC07D472C02AE45B80*)NULL, NULL);
+		return L_0;
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR EventDescriptorCollection_t5B373F7B3BB09FDD9287D4403AF4EC9283966E96* DataRowView_System_ComponentModel_ICustomTypeDescriptor_GetEvents_mD85D372D9DED6284AA37F606E2FF8C1F029B795F (DataRowView_t51724505EADBB0C11EEA0252510644143191B23B* __this, AttributeU5BU5D_t0F73488E6F1249C889608E8DCC0BCC28A874E8F1* ___0_attributes, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&EventDescriptorCollection_t5B373F7B3BB09FDD9287D4403AF4EC9283966E96_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		EventDescriptorCollection_t5B373F7B3BB09FDD9287D4403AF4EC9283966E96* L_0 = (EventDescriptorCollection_t5B373F7B3BB09FDD9287D4403AF4EC9283966E96*)il2cpp_codegen_object_new(EventDescriptorCollection_t5B373F7B3BB09FDD9287D4403AF4EC9283966E96_il2cpp_TypeInfo_var);
+		EventDescriptorCollection__ctor_m5B672594D0220F89AD3DFE0FBCDB34FED5B56CF3(L_0, (EventDescriptorU5BU5D_t36B45BFB0000115B81C8C3AC07D472C02AE45B80*)NULL, NULL);
+		return L_0;
 	}
 }
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PropertyDescriptorCollection_tC4C2FA51126BD032E2E9A0472995F7FCAC6E70DE* DataRowView_System_ComponentModel_ICustomTypeDescriptor_GetProperties_m647B3DD6D3393C459BFF19C15449A7AB90B214B4 (DataRowView_t51724505EADBB0C11EEA0252510644143191B23B* __this, const RuntimeMethod* method) 
@@ -25702,7 +25819,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR PropertyDescriptorCollection_tC4C2FA51126BD03
 	}
 	{
 		PropertyDescriptorCollection_tC4C2FA51126BD032E2E9A0472995F7FCAC6E70DE* L_0;
-		L_0 = InterfaceFuncInvoker1< PropertyDescriptorCollection_tC4C2FA51126BD032E2E9A0472995F7FCAC6E70DE*, AttributeU5BU5D_t0F73488E6F1249C889608E8DCC0BCC28A874E8F1* >::Invoke(3, ICustomTypeDescriptor_tBCDA3354DBE93ADBD2AC81379EB3957347BAD4E8_il2cpp_TypeInfo_var, __this, (AttributeU5BU5D_t0F73488E6F1249C889608E8DCC0BCC28A874E8F1*)NULL);
+		L_0 = InterfaceFuncInvoker1< PropertyDescriptorCollection_tC4C2FA51126BD032E2E9A0472995F7FCAC6E70DE*, AttributeU5BU5D_t0F73488E6F1249C889608E8DCC0BCC28A874E8F1* >::Invoke(10, ICustomTypeDescriptor_tBCDA3354DBE93ADBD2AC81379EB3957347BAD4E8_il2cpp_TypeInfo_var, __this, (AttributeU5BU5D_t0F73488E6F1249C889608E8DCC0BCC28A874E8F1*)NULL);
 		return L_0;
 	}
 }
