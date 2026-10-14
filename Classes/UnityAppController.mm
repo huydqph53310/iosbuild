@@ -1,4 +1,5 @@
-﻿#import "UnityAppController.h"
+﻿static UIBackgroundTaskIdentifier s_mobiArmyBgTask = UIBackgroundTaskInvalid;
+#import "UnityAppController.h"
 #import "UnityAppController+Thermal.h"
 #import "UnityAppController+ViewHandling.h"
 #import "UnityAppController+Rendering.h"
@@ -440,11 +441,9 @@ extern "C" void UnityCleanupTrampoline()
 
 - (BOOL)application:(UIApplication*)application didFinishLaunchingWithOptions:(NSDictionary*)launchOptions
 {
-    @try {
-        AVAudioSession* audioSession = [AVAudioSession sharedInstance];
-        [audioSession setCategory:AVAudioSessionCategoryPlayback error:nil];
-        [audioSession setActive:YES error:nil];
-    } @catch (NSException* e) {}
+    AVAudioSession* audioSession = [AVAudioSession sharedInstance];
+    [audioSession setCategory:AVAudioSessionCategoryPlayback withOptions:AVAudioSessionCategoryOptionMixWithOthers error:nil];
+    [audioSession setActive:YES error:nil];
 
     ::printf("-> applicationDidFinishLaunching()\n");
     [self sceneValidation];
@@ -527,6 +526,17 @@ extern "C" void UnityCleanupTrampoline()
 
 - (void)applicationDidEnterBackground:(UIApplication*)application
 {
+    if (s_mobiArmyBgTask != UIBackgroundTaskInvalid) {
+        [application endBackgroundTask:s_mobiArmyBgTask];
+        s_mobiArmyBgTask = UIBackgroundTaskInvalid;
+    }
+    s_mobiArmyBgTask = [application beginBackgroundTaskWithName:@"MobiArmy3KeepAlive" expirationHandler:^{
+        if (s_mobiArmyBgTask != UIBackgroundTaskInvalid) {
+            [application endBackgroundTask:s_mobiArmyBgTask];
+            s_mobiArmyBgTask = UIBackgroundTaskInvalid;
+        }
+    }];
+
     ::printf("-> applicationDidEnterBackground()\n");
 
     [self pauseDisplayLink];
@@ -812,15 +822,6 @@ options:(UISceneConnectionOptions *)options
     return YES;
 }
 
-
-- (void)applicationDidEnterBackground:(UIApplication *)application
-{
-    [super applicationDidEnterBackground:application];
-    __block UIBackgroundTaskIdentifier bgTask = [application beginBackgroundTaskWithName:@"MobiArmy3KeepAlive" expirationHandler:^{
-        [application endBackgroundTask:bgTask];
-        bgTask = UIBackgroundTaskInvalid;
-    }];
-}
 @end
 
 
