@@ -3434,6 +3434,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_PlayerPrefs_HasKey_Injected();
 		Register_UnityEngine_PlayerPrefs_HasKey_Injected();
 
+		//System.Boolean UnityEngine.PlayerPrefs::TrySetFloat_Injected(UnityEngine.Bindings.ManagedSpanWrapper&,System.Single)
+		void Register_UnityEngine_PlayerPrefs_TrySetFloat_Injected();
+		Register_UnityEngine_PlayerPrefs_TrySetFloat_Injected();
+
 		//System.Boolean UnityEngine.PlayerPrefs::TrySetInt_Injected(UnityEngine.Bindings.ManagedSpanWrapper&,System.Int32)
 		void Register_UnityEngine_PlayerPrefs_TrySetInt_Injected();
 		Register_UnityEngine_PlayerPrefs_TrySetInt_Injected();
